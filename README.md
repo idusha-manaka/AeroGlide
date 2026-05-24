@@ -1,52 +1,175 @@
+<!-- HEADER BANNER -->
 <p align="center">
-  <img src="assets/banner.png" alt="AeroGlide Banner" width="100%" style="border-radius: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.5);">
+  <img src="assets/banner.png" alt="AeroGlide Main Banner" width="100%" style="border-radius: 16px; box-shadow: 0 12px 40px rgba(0,255,128,0.25); border: 2px solid #2c2c35;">
 </p>
 
-<h1 align="center" style="font-size: 32px; font-weight: 800; border-bottom: none; margin-bottom: 0;">✈️ AeroGlide Virtual Touchpad</h1>
-<p align="center" style="font-size: 16px; color: #8a8a93; margin-top: 5px;">Transform your hand gestures into responsive, zero-latency desktop navigation.</p>
-
+<!-- DYNAMIC HEADLINE -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.12%2B-3776AB?style=for-the-badge&logo=python&logoColor=yellow" alt="Python">
-  <img src="https://img.shields.io/badge/OpenCV-4.x-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV">
-  <img src="https://img.shields.io/badge/MediaPipe-0.10.14-00C7B7?style=for-the-badge&logo=google-cloud&logoColor=white" alt="MediaPipe">
-  <img src="https://img.shields.io/badge/OS-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Support">
-  <img src="https://img.shields.io/badge/Status-Ultra--Smooth-00FF80?style=for-the-badge" alt="Smoothness Status">
+  <a href="https://github.com/idusha-manaka/aero-glide">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Outfit&size=34&duration=2500&pause=1000&color=00FF80&center=true&vCenter=true&width=600&lines=✈️+AERO-GLIDE+TOUCHPAD;🔮+THE+FUTURE+OF+NAVIGATION;⚡+ZERO-LATENCY+TRACKING" alt="Typing SVG" />
+  </a>
 </p>
+
+<p align="center" style="font-size: 18px; color: #a0a0ab; max-width: 650px; margin: 0 auto 20px; line-height: 1.6; text-align: center;">
+  An ultra-smooth, high-precision, gesture-controlled virtual touchpad that transforms your webcam feed into an organic, hardware-accelerated desktop navigation experience.
+</p>
+
+<!-- HIGH-CONTRAST METRIC BADGES -->
+<p align="center">
+  <a href="https://github.com/idusha-manaka/aero-glide">
+    <img src="https://img.shields.io/github/stars/idusha-manaka/aero-glide?style=for-the-badge&color=00FF80&logo=github&logoColor=black" alt="GitHub stars">
+  </a>
+  <img src="https://img.shields.io/badge/OS-Windows--Only-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="OS Windows">
+  <img src="https://img.shields.io/badge/Engine-win32--ctypes-FF007F?style=for-the-badge" alt="Engine win32">
+  <img src="https://img.shields.io/badge/Smoothing-Double--Exponential-FFFF00?style=for-the-badge" alt="Smoothing Double">
+</p>
+
+<!-- GLOWING ANIME DIVIDER -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andryback/andryback/main/images/divider.gif" width="100%" alt="Divider">
+</p>
+
+<br>
 
 ---
 
-## ⚡ Core Engine Highlights
+## ⚡ The AeroGlide Advantage
 
-AeroGlide is a state-of-the-art virtual touchpad that turns real-time camera coordinates into fluid, organic mouse movements. By bypassing standard automation latency and using low-level Win32 inputs, AeroGlide delivers a zero-lag desktop control experience.
+Traditional gesture mouse systems suffer from cursor jitter, high latency, and edge-to-edge stuck issues. AeroGlide uses low-level hardware kernel injection and high-DPI scaling awareness to redefine tracking standards:
+
+<br>
+
+<table width="100%" style="border-collapse: collapse; border: none; background: transparent;">
+  <thead>
+    <tr style="background: #141416; border-bottom: 2px solid #2c2c35;">
+      <th align="left" width="40%" style="padding: 12px; font-size: 15px; color: #a0a0ab; border: none;">Feature Matrix</th>
+      <th align="center" width="30%" style="padding: 12px; font-size: 15px; color: #FF4040; border: none;">Standard Gesture Apps</th>
+      <th align="center" width="30%" style="padding: 12px; font-size: 15px; color: #00FF80; border: none;">AeroGlide Touchpad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+      <td style="padding: 12px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">Input Execution Latency</td>
+      <td align="center" style="padding: 12px; font-size: 14px; color: #ff5555; border: none;">🔴 High Lag (30ms - 50ms)</td>
+      <td align="center" style="padding: 12px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">🟢 Real-Time (Zero-Lag ctypes)</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+      <td style="padding: 12px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">DPI Display Scaling Support</td>
+      <td align="center" style="padding: 12px; font-size: 14px; color: #ff5555; border: none;">❌ Stuck (fails on 125%/150%)</td>
+      <td align="center" style="padding: 12px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ 1:1 Pixel-Perfect DPI-Aware</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+      <td style="padding: 12px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">Cursor Precision & Jitter</td>
+      <td align="center" style="padding: 12px; font-size: 14px; color: #ff5555; border: none;">❌ High Jitter (trembling pointer)</td>
+      <td align="center" style="padding: 12px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ Adaptive Smoothing Damping</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+      <td style="padding: 12px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">Hand Rotation & Tilt</td>
+      <td align="center" style="padding: 12px; font-size: 14px; color: #ff5555; border: none;">❌ Fails (strict y-axis triggers)</td>
+      <td align="center" style="padding: 12px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ Orientation-Independent Ratios</td>
+    </tr>
+    <tr style="border-bottom: none; background: transparent;">
+      <td style="padding: 12px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">Accidental Clicks (Jitter)</td>
+      <td align="center" style="padding: 12px; font-size: 14px; color: #ff5555; border: none;">❌ Constant micro-clicking</td>
+      <td align="center" style="padding: 12px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ Magnetic Schmitt Latch Latching</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+---
+
+## 🔮 Futuristic Features Dashboard
+
+<br>
+
+<!-- ALTERNATING COLUMN 1: WIN32 ACCELERATION & DPI -->
+<table width="100%" style="border-collapse: collapse; border: none; background: transparent; margin-bottom: 20px;">
+  <tr style="border: none; background: transparent;">
+    <td width="55%" style="padding: 20px 10px; border: none; vertical-align: middle;">
+      <span style="background: rgba(0, 255, 128, 0.1); color: #00FF80; font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 20px; border: 1px solid rgba(0, 255, 128, 0.3);">OS LEVEL PERFORMANCE</span>
+      <h2 style="margin-top: 10px; color: #ffffff; font-size: 24px; font-weight: 700;">⚡ win32 Kernel Acceleration & DPI Awareness</h2>
+      <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 10px;">
+        AeroGlide completely bypasses standard high-level cursor automation libraries by calling the kernel-level Windows <b>User32 API</b> (<code>SetCursorPos</code> and <code>mouse_event</code>) directly via Python ctypes. Clicks, drags, and scrolling are injected directly into the OS. By calling <code>SetProcessDPIAware()</code>, tracking matches 1:1 with physical screen pixels on Windows laptops, overcoming 125%/150% display scaling issues.
+      </p>
+    </td>
+    <td width="45%" style="padding: 10px; border: none; text-align: right;">
+      <img src="assets/ui_mockup.png" alt="AeroGlide UI Overlay" width="100%" style="border-radius: 12px; border: 1px solid #2c2c35; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
+    </td>
+  </tr>
+</table>
+
+<!-- ALTERNATING COLUMN 2: GEOMETRIC PROPORTIONS -->
+<table width="100%" style="border-collapse: collapse; border: none; background: transparent; margin-bottom: 20px;">
+  <tr style="border: none; background: transparent;">
+    <td width="45%" style="padding: 10px; border: none;">
+      <img src="assets/banner.png" alt="AeroGlide Scale Box" width="100%" style="border-radius: 12px; border: 1px solid #2c2c35; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
+    </td>
+    <td width="55%" style="padding: 20px 20px; border: none; vertical-align: middle;">
+      <span style="background: rgba(0, 223, 255, 0.1); color: #00DFFF; font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 20px; border: 1px solid rgba(0, 223, 255, 0.3);">GEOMETRIC ALGORITHMS</span>
+      <h2 style="margin-top: 10px; color: #ffffff; font-size: 24px; font-weight: 700;">📐 Proportional & Rotation Independent Tracking</h2>
+      <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 10px;">
+        Traditional gesture systems fail when the hand is tilted or when the back of the hand faces the camera. AeroGlide uses <b>Proportional Euclidean Distances to the Wrist</b> normalized by the dynamic palm size $H = \text{distance}(\text{Wrist}, \text{Middle MCP})$. This scale and rotation-independent algorithm guarantees flawless tracking regardless of whether your hand is kept straight, sideways, palm-facing, or back-facing!
+      </p>
+    </td>
+  </tr>
+</table>
+
+<!-- ALTERNATING COLUMN 3: SMOOTHING & HYSTERESIS -->
+<table width="100%" style="border-collapse: collapse; border: none; background: transparent;">
+  <tr style="border: none; background: transparent;">
+    <td width="55%" style="padding: 20px 10px; border: none; vertical-align: middle;">
+      <span style="background: rgba(255, 64, 64, 0.1); color: #FF4040; font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 20px; border: 1px solid rgba(255, 64, 64, 0.3);">INTERACTION COGNITION</span>
+      <h2 style="margin-top: 10px; color: #ffffff; font-size: 24px; font-weight: 700;">🛡️ Schmitt Trigger Click Latch & Adaptive Filtering</h2>
+      <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 10px;">
+        AeroGlide integrates an intelligent <b>Adaptive Exponential Smoother</b> that automatically increases damping at slow speeds to eliminate micro-tremors (pixel-perfect precision) and decreases damping at high speeds to achieve zero dragging latency. Accidental hover clicks are blocked by a <b>Schmitt Trigger (Hysteresis latch)</b>: clicks activate below <code>0.032</code> units and only release when fingers open beyond <code>0.047</code>, giving a smooth "magnetic" latch feel!
+      </p>
+    </td>
+    <td width="45%" style="padding: 10px; border: none; text-align: right;">
+      <img src="https://raw.githubusercontent.com/andryback/andryback/main/images/divider.gif" width="100%" style="opacity: 0.5;">
+    </td>
+  </tr>
+</table>
+
+<br>
+
+---
+
+## 🎮 Interactive Gesture Reference Panel
+
+AeroGlide maps your natural hand shapes into highly fluid desktop actions. Learn the standard gestures below:
 
 <br>
 
 <table width="100%" style="border-collapse: collapse; border: none; background: transparent;">
   <tr style="border: none; background: transparent;">
-    <td width="50%" style="padding: 10px; border: none;">
-      <div style="background: #1E1E24; padding: 20px; border-radius: 12px; border: 1px solid #2C2C35; height: 160px;">
-        <h3 style="margin-top: 0; color: #00FF80; font-size: 16px;">⚡ win32 Kernel Input Acceleration</h3>
-        <p style="font-size: 13px; color: #b0b0b5; margin-bottom: 0; line-height: 1.5;">Bypasses heavy high-level libraries. Calls Windows User32 APIs (<code>SetCursorPos</code> and <code>mouse_event</code>) directly via Python ctypes, delivering instant, hardware-level cursor responses.</p>
+    <td width="25%" style="padding: 10px; border: none;">
+      <div style="background: #141416; border: 1px solid #2c2c35; border-radius: 12px; padding: 15px; text-align: center; height: 190px;">
+        <span style="font-size: 32px;">☝️</span>
+        <h4 style="margin: 10px 0 5px; color: #ffffff; font-size: 15px;">Cursor Moving</h4>
+        <p style="font-size: 12px; color: #8a8a93; line-height: 1.5; margin: 0;">Extend only your index finger. Move hand inside the green zone to control the cursor.</p>
       </div>
     </td>
-    <td width="50%" style="padding: 10px; border: none;">
-      <div style="background: #1E1E24; padding: 20px; border-radius: 12px; border: 1px solid #2C2C35; height: 160px;">
-        <h3 style="margin-top: 0; color: #00DFFF; font-size: 16px;">📐 Orientation-Independent Gestures</h3>
-        <p style="font-size: 13px; color: #b0b0b5; margin-bottom: 0; line-height: 1.5;">Uses dynamic palm-scaling ratios $D = \text{dist}(\text{Tip}, \text{Wrist}) / H$. Finger folds are calculated proportionally, making gestures 100% immune to hand tilt, rotation, or orientation.</p>
+    <td width="25%" style="padding: 10px; border: none;">
+      <div style="background: #141416; border: 1px solid #2c2c35; border-radius: 12px; padding: 15px; text-align: center; height: 190px;">
+        <span style="font-size: 32px;">🤌</span>
+        <h4 style="margin: 10px 0 5px; color: #ffffff; font-size: 15px;">Left Click & Drag</h4>
+        <p style="font-size: 12px; color: #8a8a93; line-height: 1.5; margin: 0;">Pinch Index & Thumb. Quick pinch triggers a Click; hold pinch for >0.4s to Drag & Drop.</p>
       </div>
     </td>
-  </tr>
-  <tr style="border: none; background: transparent;">
-    <td width="50%" style="padding: 10px; border: none;">
-      <div style="background: #1E1E24; padding: 20px; border-radius: 12px; border: 1px solid #2C2C35; height: 160px;">
-        <h3 style="margin-top: 0; color: #FFFF00; font-size: 16px;">📈 Adaptive Double Smoothing</h3>
-        <p style="font-size: 13px; color: #b0b0b5; margin-bottom: 0; line-height: 1.5;">An intelligent filter that scales smoothing dynamically. Slow movements get high damping to remove hand tremors (pixel-perfect precision); fast movements get high speed to avoid dragging latency.</p>
+    <td width="25%" style="padding: 10px; border: none;">
+      <div style="background: #141416; border: 1px solid #2c2c35; border-radius: 12px; padding: 15px; text-align: center; height: 190px;">
+        <span style="font-size: 32px;">✌️</span>
+        <h4 style="margin: 10px 0 5px; color: #ffffff; font-size: 15px;">Right Click & Scroll</h4>
+        <p style="font-size: 12px; color: #8a8a93; line-height: 1.5; margin: 0;">Pinch Middle & Thumb for Right Click. Hold Index & Middle together and slide to Scroll.</p>
       </div>
     </td>
-    <td width="50%" style="padding: 10px; border: none;">
-      <div style="background: #1E1E24; padding: 20px; border-radius: 12px; border: 1px solid #2C2C35; height: 160px;">
-        <h3 style="margin-top: 0; color: #FF4040; font-size: 16px;">🛡️ Schmitt Trigger Click Latch</h3>
-        <p style="font-size: 13px; color: #b0b0b5; margin-bottom: 0; line-height: 1.5;">Features a magnetic hysteresis latch. Clicks trigger at <code>0.032</code> units and only release when opened beyond <code>0.047</code>. This completely eliminates micro-clicks during pointer navigation.</p>
+    <td width="25%" style="padding: 10px; border: none;">
+      <div style="background: #141416; border: 1px solid #2c2c35; border-radius: 12px; padding: 15px; text-align: center; height: 190px;">
+        <span style="font-size: 32px;">🖐️</span>
+        <h4 style="margin: 10px 0 5px; color: #ffffff; font-size: 15px;">Zoom In / Out</h4>
+        <p style="font-size: 12px; color: #8a8a93; line-height: 1.5; margin: 0;">Open your hand completely. Spread Index & Thumb to Zoom In; pinch them close to Zoom Out.</p>
       </div>
     </td>
   </tr>
@@ -56,34 +179,12 @@ AeroGlide is a state-of-the-art virtual touchpad that turns real-time camera coo
 
 ---
 
-## 🎨 Interactive Gesture Dashboard
-
-AeroGlide maps natural hand shapes into high-fidelity desktop actions:
-
-```
-         ☝️                🤌                ✊                👌
-   CURSOR NAVIGATION    LEFT CLICK        DRAG & DROP      VOLUME CONTROL
-```
-
-| Mode | Gesture Type | Hand Shape | Action Triggered |
-| :--- | :--- | :--- | :--- |
-| **Cursor Control** | ☝️ **Navigation** | Index extended; other fingers folded | Butter-smooth, jitter-free cursor tracking |
-| **Left Click** | 🤌 **Pinch Action** | Pinch Index & Thumb tips together | Instant Left Click (debounced) |
-| **Drag & Drop** | ✊ **Hold Pinch** | Pinch Index & Thumb and hold for >0.4s | Left Mouse Down (hold & drag; release to drop) |
-| **Double Click** | 🤌🤌 **Double Tap** | Pinch Index & Thumb twice rapidly | Double Click action (within 0.35s) |
-| **Right Click** | ✌️ **Middle Pinch**| Pinch Middle & Thumb (Index open) | Right Mouse Click (ignores folded middle) |
-| **Web Scroll** | ✌️ **Two-finger Drag**| Index & Middle open close together | Butter-smooth Vertical / Horizontal page scroll |
-| **Zoom In/Out** | 🖐️ **Open hand span**| Keep 5 fingers open, scale Thumb-Index | Zoom In (spread apart) / Zoom Out (pinch close) |
-| **Volume Control** | 👌 **Volume Dial** | Thumb, Index, Middle open (Ring/Pinky closed) | System Volume UP (raise hand) / Volume DOWN |
-
----
-
-## 🛠️ System Architecture Diagram
+## 🛠️ System Architecture
 
 ```mermaid
 graph TD
     A[Webcam Video Capture] -->|Multi-Threaded Reading| B(VideoStream Thread)
-    B -->|Lock-Free Frame Queue| C(Main Gesture Process Loop)
+    B -->|Lock-Free Frame Queue| C(Main Process Loop)
     C -->|MediaPipe 0.10.14 Inference| D{Hand Tracked?}
     D -->|No| E[System State: Idle]
     D -->|Yes| F[Measure Palm Scale Factor H]
@@ -107,48 +208,51 @@ graph TD
 
 ---
 
-## 📦 Repository Structure
+## 📦 Directory Blueprint
 
-* [app.py](file:///c:/Users/ASUS/Downloads/touch%20pad/app.py): The entry point. A gorgeous CustomTkinter dark-mode control center featuring active-zone visualization, live state feedback, and slider diagnostics.
-* [gesture_engine.py](file:///c:/Users/ASUS/Downloads/touch%20pad/gesture_engine.py): The core logic. Manages hand coordinate normalizations, DPI-awareness, proportional gesture states, and Win32 low-level hardware input simulations.
-* [smooth.py](file:///c:/Users/ASUS/Downloads/touch%20pad/smooth.py): Damps high-frequency hand tremors using our custom mathematical **Adaptive Exponential Smoother**.
-* [video_stream.py](file:///c:/Users/ASUS/Downloads/touch%20pad/video_stream.py): Runs camera acquisition in a separate thread to prevent webcam frame read blocks, maximizing tracking FPS.
-
----
-
-## 📥 Getting Started
-
-### Prerequisites
-* **Windows OS** (required for low-level win32 ctypes input calls).
-* **Python 3.12** (highly recommended for stable MediaPipe Solution pre-built binary distributions).
-
-### Installation Instructions
-
-1. **Clone this repository:**
-   ```bash
-   git clone https://github.com/idusha-manaka/aero-glide.git
-   cd aero-glide
-   ```
-
-2. **Install core dependencies:**
-   ```bash
-   pip install mediapipe==0.10.14 pyautogui customtkinter opencv-python
-   ```
-
-3. **Run the Application:**
-   ```bash
-   python app.py
-   ```
+```
+aero-glide/
+│
+├── assets/
+│   ├── banner.png          # High-tech abstract neon repository banner
+│   └── ui_mockup.png       # Futuristic gesture overlay interface mockup
+│
+├── app.py                  # CustomTkinter Dark Mode GUI HUD calibration panel
+├── gesture_engine.py       # win32 low-level inputs, DPI awareness & proportional engine
+├── smooth.py               # Dynamic double exponential smoothing mathematical filter
+├── video_stream.py         # Background threaded camera capture wrapper
+└── README.md               # Gorgeous project e-manual landing page
+```
 
 ---
 
-## ⚙️ Calibration & Customization
+## 📥 Quick Setup Guide
 
-AeroGlide features a real-time dark-theme GUI control panel to easily calibrate pointer response to fit your workspace:
+### 🧬 Prerequisites
+* **Windows OS** (required for ctypes lower win32 kernel mouse triggers).
+* **Python 3.12** (essential for stable MediaPipe Solution pre-built binary distributions).
 
-<p align="center">
-  <img src="assets/banner.png" alt="AeroGlide HUD" width="80%" style="border-radius: 8px;">
-</p>
+### ⚡ Installation Commands
+
+Copy and run the following commands in your Command Prompt (cmd) / PowerShell:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/idusha-manaka/aero-glide.git
+cd aero-glide
+
+# 2. Install core stable dependencies (specifically MediaPipe 0.10.14)
+pip install mediapipe==0.10.14 pyautogui customtkinter opencv-python
+
+# 3. Launch the futuristic UI Control panel!
+python app.py
+```
+
+---
+
+## ⚙️ Calibration & Sensitivity Controls
+
+AeroGlide comes with a real-time dark-theme GUI control panel to easily calibrate pointer response to fit your workspace:
 
 <details>
   <summary><b>🔍 View Advanced Calibration Details</b></summary>
