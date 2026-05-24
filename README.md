@@ -1,32 +1,7 @@
-<!-- HIGH-FIDELITY CYBERPUNK ANIME HUD HEADER CARD -->
-<div align="center" style="background: linear-gradient(135deg, #0d0b18 0%, #150f24 100%); border: 3px double #FF007F; border-radius: 20px; padding: 45px 20px; box-shadow: 0 10px 40px rgba(255, 0, 127, 0.3), inset 0 0 25px rgba(0, 240, 255, 0.15); margin-bottom: 25px; position: relative; overflow: hidden;">
-  <!-- Cyber HUD Decorative brackets -->
-  <div style="position: absolute; top: 15px; left: 18px; font-family: monospace; color: #00F0FF; font-size: 11px; font-weight: bold; letter-spacing: 2px;">[ AEROGLIDE // SYSTEM_INIT ]</div>
-  <div style="position: absolute; top: 15px; right: 18px; font-family: monospace; color: #FF007F; font-size: 11px; font-weight: bold; letter-spacing: 2px;">SYS_CORE: v2.4.0-NEURAL</div>
-
-  <br>
-  
-  <!-- Main Title with Glowing Text shadow -->
-  <h1 align="center" style="margin: 0; font-family: 'Outfit', 'Trebuchet MS', sans-serif; font-size: 58px; font-weight: 900; color: #ffffff; letter-spacing: 3px; text-shadow: 0 0 15px rgba(0, 240, 255, 0.6), 0 0 30px rgba(255, 0, 127, 0.3); border: none;">AeroGlide</h1>
-  
-  <!-- Stylized Cyber Divider -->
-  <div style="width: 280px; height: 3px; background: linear-gradient(90deg, transparent, #00F0FF, #FF007F, transparent); margin: 18px auto;"></div>
-  
-  <!-- Subtitle / Description with clean spacing -->
-  <p align="center" style="margin: 0; font-family: 'Outfit', 'Inter', sans-serif; font-size: 18px; font-weight: 700; color: #00F0FF; letter-spacing: 1px; text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);">
-    Next-Gen Virtual Gesture Touchpad for Windows
-  </p>
-  
-  <br>
-
-  <!-- Decorative HUD scanning stats -->
-  <div style="font-family: monospace; color: rgba(224, 224, 240, 0.7); font-size: 11px; letter-spacing: 2px; margin-top: 10px;">
-    NEURAL_SYNC_RATE: <span style="color: #00FF80; font-weight: bold;">99.87%</span> | STATUS: <span style="color: #00FF80; font-weight: bold;">STANDBY</span>
-  </div>
-  
-  <div style="position: absolute; bottom: 12px; left: 18px; font-family: monospace; color: rgba(0, 240, 255, 0.3); font-size: 9px;">LINK_ESTABLISHED</div>
-  <div style="position: absolute; bottom: 12px; right: 18px; font-family: monospace; color: rgba(255, 0, 127, 0.3); font-size: 9px;">SYS_HUD_RENDER: 30_FPS</div>
-</div>
+<!-- DYNAMIC GRADIENT ANIMATED WAVING HEADER -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=d946ef,00f0ff&height=250&section=header&text=AeroGlide&fontSize=56&fontColor=ffffff&desc=Next-Gen%20Virtual%20Gesture%20Touchpad%20for%20Windows&descColor=00f0ff&descSize=16&descAlignY=72&animation=fadeIn" width="100%" alt="AeroGlide Animated Waving Title">
+</p>
 
 <!-- DYNAMIC TYPING SVG HEADER -->
 <p align="center">
