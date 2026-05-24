@@ -1,28 +1,28 @@
-<!-- MAIN DISPLAY BANNER -->
+<!-- DYNAMIC ANIMATED WAVING GRADIENT HEADER -->
 <p align="center">
-  <img src="assets/banner.png" alt="AeroGlide Header Banner" width="100%" style="border-radius: 16px; box-shadow: 0 20px 50px rgba(0, 255, 128, 0.25); border: 2px solid #2c2c35;">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff80,00dfff&height=200&section=header&text=AeroGlide&fontSize=65&animation=fadeIn&desc=Virtual%20Gesture%20Touchpad&descSize=22&descAlignY=64" width="100%" alt="AeroGlide Animated Title">
 </p>
 
 <!-- DYNAMIC HERO TITLE -->
 <p align="center">
-  <a href="https://github.com/idusha-manaka/aero-glide">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Outfit&size=36&duration=2000&pause=800&color=00FF80&center=true&vCenter=true&width=600&lines=✈️+AERO-GLIDE+TOUCHPAD;🔮+THE+FUTURE+OF+CONTROL;⚡+ZERO-LATENCY+TRACKING;💎+PREMIUM+AESTHETICS" alt="AeroGlide Title Animation" />
+  <a href="https://github.com/idusha-manaka/AeroGlide">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Outfit&size=30&duration=2000&pause=800&color=00FF80&center=true&vCenter=true&width=600&lines=🔮+THE+FUTURE+OF+DESKTOP+NAVIGATION;⚡+LOW-LEVEL+OS+INPUT+ACCELERATION;💎+PREMIUM+CYBERPUNK+AESTHETICS" alt="AeroGlide Title Animation" />
   </a>
-</p>
-
-<p align="center" style="font-size: 18px; color: #a0a0ab; max-width: 680px; margin: 0 auto 20px; line-height: 1.6; text-align: center; font-family: 'Outfit', sans-serif;">
-  An ultra-smooth, high-precision, gesture-controlled virtual touchpad that transforms your webcam feed into a responsive, hardware-accelerated desktop navigation ecosystem.
 </p>
 
 <!-- HIGH-CONTRAST BADGES BAR -->
 <p align="center">
-  <a href="https://github.com/idusha-manaka/aero-glide">
-    <img src="https://img.shields.io/github/stars/idusha-manaka/aero-glide?style=for-the-badge&color=00FF80&logo=github&logoColor=black" alt="GitHub stars">
+  <a href="https://github.com/idusha-manaka/AeroGlide">
+    <img src="https://img.shields.io/github/stars/idusha-manaka/AeroGlide?style=for-the-badge&color=00FF80&logo=github&logoColor=black" alt="GitHub stars">
   </a>
   <img src="https://img.shields.io/badge/OS-Windows--Only-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Support">
   <img src="https://img.shields.io/badge/Engine-win32--ctypes-FF007F?style=for-the-badge&logo=python&logoColor=yellow" alt="win32 ctypes">
   <img src="https://img.shields.io/badge/Model-MediaPipe--0.10.14-00C7B7?style=for-the-badge&logo=google-cloud&logoColor=white" alt="MediaPipe">
-  <img src="https://img.shields.io/badge/Performance-30%20FPS-FFFF00?style=for-the-badge" alt="FPS Performance">
+</p>
+
+<!-- NEON PANORAMIC HUD GRAPHIC -->
+<p align="center">
+  <img src="assets/wide_banner.png" alt="AeroGlide Panoramic HUD Banner" width="100%" style="border-radius: 16px; border: 2px solid #2c2c35; box-shadow: 0 15px 45px rgba(0, 255, 128, 0.15);">
 </p>
 
 <!-- NEON GLOWING DIVIDER -->
@@ -81,7 +81,7 @@ Traditional virtual touchpads suffer from severe cursor drift, click latency, an
 
 ---
 
-## 🔮 Futuristic Features Dashboard
+## 🔮 Futuristic Features Showcase
 
 <br>
 
@@ -107,7 +107,7 @@ Traditional virtual touchpads suffer from severe cursor drift, click latency, an
 <table width="100%" style="border-collapse: collapse; border: none; background: transparent; margin-bottom: 25px;">
   <tr style="border: none; background: transparent;">
     <td width="45%" style="padding: 10px; border: none;">
-      <img src="assets/banner.png" alt="AeroGlide Scale Box" width="100%" style="border-radius: 16px; border: 2px solid #2c2c35; box-shadow: 0 15px 45px rgba(0,0,0,0.5);">
+      <img src="assets/wide_banner.png" alt="AeroGlide Scale Box" width="100%" style="border-radius: 16px; border: 2px solid #2c2c35; box-shadow: 0 15px 45px rgba(0,0,0,0.5);">
     </td>
     <td width="55%" style="padding: 20px 20px; border: none; vertical-align: middle;">
       <span style="background: rgba(0, 223, 255, 0.1); color: #00DFFF; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 223, 255, 0.3); font-family: 'Outfit';">GEOMETRIC ALGORITHMS</span>
@@ -132,7 +132,7 @@ Traditional virtual touchpads suffer from severe cursor drift, click latency, an
       </p>
     </td>
     <td width="45%" style="padding: 10px; border: none; text-align: right;">
-      <img src="https://raw.githubusercontent.com/andryback/andryback/main/images/divider.gif" width="100%" style="opacity: 0.35;">
+      <img src="assets/banner.png" alt="AeroGlide Hands Tracking Latch Visual" width="100%" style="border-radius: 16px; border: 2px solid #2c2c35; box-shadow: 0 15px 45px rgba(0, 255, 128, 0.15);">
     </td>
   </tr>
 </table>
@@ -221,10 +221,10 @@ To make this project feel extremely high-end, copy and run these commands from o
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│  idusha-manaka @ aero-glide ~                                          │
+│  idusha-manaka @ AeroGlide ~                                           │
 ├────────────────────────────────────────────────────────────────────────┤
-│  $ git clone https://github.com/idusha-manaka/aero-glide.git           │
-│  $ cd aero-glide                                                       │
+│  $ git clone https://github.com/idusha-manaka/AeroGlide.git           │
+│  $ cd AeroGlide                                                       │
 │  $ pip install mediapipe==0.10.14 pyautogui customtkinter opencv-python │
 │  $ python app.py                                                       │
 └────────────────────────────────────────────────────────────────────────┘
@@ -239,8 +239,8 @@ To make this project feel extremely high-end, copy and run these commands from o
 Show your support for this futuristic gesture navigation touchpad! Star the repository to track our growing community graph below:
 
 <p align="center">
-  <a href="https://github.com/idusha-manaka/aero-glide">
-    <img src="https://starchart.cc/idusha-manaka/aero-glide.svg" alt="AeroGlide Stargazers Over Time Graph" width="100%" style="max-width: 680px; border-radius: 12px; border: 1px solid #2c2c35; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+  <a href="https://github.com/idusha-manaka/AeroGlide">
+    <img src="https://starchart.cc/idusha-manaka/AeroGlide.svg" alt="AeroGlide Stargazers Over Time Graph" width="100%" style="max-width: 680px; border-radius: 12px; border: 1px solid #2c2c35; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
   </a>
 </p>
 
