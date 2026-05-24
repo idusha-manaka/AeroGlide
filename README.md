@@ -1,77 +1,78 @@
-<!-- HEADER BANNER -->
+<!-- MAIN DISPLAY BANNER -->
 <p align="center">
-  <img src="assets/banner.png" alt="AeroGlide Main Banner" width="100%" style="border-radius: 16px; box-shadow: 0 12px 40px rgba(0,255,128,0.25); border: 2px solid #2c2c35;">
+  <img src="assets/banner.png" alt="AeroGlide Header Banner" width="100%" style="border-radius: 16px; box-shadow: 0 20px 50px rgba(0, 255, 128, 0.25); border: 2px solid #2c2c35;">
 </p>
 
-<!-- DYNAMIC HEADLINE -->
+<!-- DYNAMIC HERO TITLE -->
 <p align="center">
   <a href="https://github.com/idusha-manaka/aero-glide">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Outfit&size=34&duration=2500&pause=1000&color=00FF80&center=true&vCenter=true&width=600&lines=✈️+AERO-GLIDE+TOUCHPAD;🔮+THE+FUTURE+OF+NAVIGATION;⚡+ZERO-LATENCY+TRACKING" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Outfit&size=36&duration=2000&pause=800&color=00FF80&center=true&vCenter=true&width=600&lines=✈️+AERO-GLIDE+TOUCHPAD;🔮+THE+FUTURE+OF+CONTROL;⚡+ZERO-LATENCY+TRACKING;💎+PREMIUM+AESTHETICS" alt="AeroGlide Title Animation" />
   </a>
 </p>
 
-<p align="center" style="font-size: 18px; color: #a0a0ab; max-width: 650px; margin: 0 auto 20px; line-height: 1.6; text-align: center;">
-  An ultra-smooth, high-precision, gesture-controlled virtual touchpad that transforms your webcam feed into an organic, hardware-accelerated desktop navigation experience.
+<p align="center" style="font-size: 18px; color: #a0a0ab; max-width: 680px; margin: 0 auto 20px; line-height: 1.6; text-align: center; font-family: 'Outfit', sans-serif;">
+  An ultra-smooth, high-precision, gesture-controlled virtual touchpad that transforms your webcam feed into a responsive, hardware-accelerated desktop navigation ecosystem.
 </p>
 
-<!-- HIGH-CONTRAST METRIC BADGES -->
+<!-- HIGH-CONTRAST BADGES BAR -->
 <p align="center">
   <a href="https://github.com/idusha-manaka/aero-glide">
     <img src="https://img.shields.io/github/stars/idusha-manaka/aero-glide?style=for-the-badge&color=00FF80&logo=github&logoColor=black" alt="GitHub stars">
   </a>
-  <img src="https://img.shields.io/badge/OS-Windows--Only-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="OS Windows">
-  <img src="https://img.shields.io/badge/Engine-win32--ctypes-FF007F?style=for-the-badge" alt="Engine win32">
-  <img src="https://img.shields.io/badge/Smoothing-Double--Exponential-FFFF00?style=for-the-badge" alt="Smoothing Double">
+  <img src="https://img.shields.io/badge/OS-Windows--Only-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Support">
+  <img src="https://img.shields.io/badge/Engine-win32--ctypes-FF007F?style=for-the-badge&logo=python&logoColor=yellow" alt="win32 ctypes">
+  <img src="https://img.shields.io/badge/Model-MediaPipe--0.10.14-00C7B7?style=for-the-badge&logo=google-cloud&logoColor=white" alt="MediaPipe">
+  <img src="https://img.shields.io/badge/Performance-30%20FPS-FFFF00?style=for-the-badge" alt="FPS Performance">
 </p>
 
-<!-- GLOWING ANIME DIVIDER -->
+<!-- NEON GLOWING DIVIDER -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/andryback/andryback/main/images/divider.gif" width="100%" alt="Divider">
+  <img src="https://raw.githubusercontent.com/andryback/andryback/main/images/divider.gif" width="100%" alt="Neon Divider" style="margin: 25px 0;">
 </p>
 
 <br>
 
 ---
 
-## ⚡ The AeroGlide Advantage
+## 💎 The AeroGlide Advantage
 
-Traditional gesture mouse systems suffer from cursor jitter, high latency, and edge-to-edge stuck issues. AeroGlide uses low-level hardware kernel injection and high-DPI scaling awareness to redefine tracking standards:
+Traditional virtual touchpads suffer from severe cursor drift, click latency, and coordinate scaling issues. AeroGlide uses low-level Windows kernel simulation and dynamic hand-scaling to deliver a flawless, high-fidelity experience:
 
 <br>
 
 <table width="100%" style="border-collapse: collapse; border: none; background: transparent;">
   <thead>
     <tr style="background: #141416; border-bottom: 2px solid #2c2c35;">
-      <th align="left" width="40%" style="padding: 12px; font-size: 15px; color: #a0a0ab; border: none;">Feature Matrix</th>
-      <th align="center" width="30%" style="padding: 12px; font-size: 15px; color: #FF4040; border: none;">Standard Gesture Apps</th>
-      <th align="center" width="30%" style="padding: 12px; font-size: 15px; color: #00FF80; border: none;">AeroGlide Touchpad</th>
+      <th align="left" width="40%" style="padding: 14px; font-size: 15px; color: #a0a0ab; border: none;">Feature Checklist</th>
+      <th align="center" width="30%" style="padding: 14px; font-size: 15px; color: #FF4040; border: none;">Standard Mouse Apps</th>
+      <th align="center" width="30%" style="padding: 14px; font-size: 15px; color: #00FF80; border: none;">AeroGlide Touchpad</th>
     </tr>
   </thead>
   <tbody>
     <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
-      <td style="padding: 12px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">Input Execution Latency</td>
-      <td align="center" style="padding: 12px; font-size: 14px; color: #ff5555; border: none;">🔴 High Lag (30ms - 50ms)</td>
-      <td align="center" style="padding: 12px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">🟢 Real-Time (Zero-Lag ctypes)</td>
+      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">⚡ **Input Execution Latency**</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #ff5555; border: none;">🔴 High Lag (30ms - 50ms)</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">🟢 Instant (Zero-Lag win32)</td>
     </tr>
     <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
-      <td style="padding: 12px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">DPI Display Scaling Support</td>
-      <td align="center" style="padding: 12px; font-size: 14px; color: #ff5555; border: none;">❌ Stuck (fails on 125%/150%)</td>
-      <td align="center" style="padding: 12px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ 1:1 Pixel-Perfect DPI-Aware</td>
+      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">🖥️ **DPI Scaling (125%/150%)**</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #ff5555; border: none;">❌ Stuck (fails on laptop screens)</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ 1:1 Pixel-Perfect DPI Aware</td>
     </tr>
     <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
-      <td style="padding: 12px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">Cursor Precision & Jitter</td>
-      <td align="center" style="padding: 12px; font-size: 14px; color: #ff5555; border: none;">❌ High Jitter (trembling pointer)</td>
-      <td align="center" style="padding: 12px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ Adaptive Smoothing Damping</td>
+      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">📈 **Cursor Precision Damping**</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #ff5555; border: none;">❌ Unstable (high tremor jitter)</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ Adaptive Smoothing Filter</td>
     </tr>
     <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
-      <td style="padding: 12px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">Hand Rotation & Tilt</td>
-      <td align="center" style="padding: 12px; font-size: 14px; color: #ff5555; border: none;">❌ Fails (strict y-axis triggers)</td>
-      <td align="center" style="padding: 12px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ Orientation-Independent Ratios</td>
+      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">📐 **Hand Tilt & Orientation**</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #ff5555; border: none;">❌ Fails (strict y-axis targets)</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ Rotation-Independent Ratios</td>
     </tr>
     <tr style="border-bottom: none; background: transparent;">
-      <td style="padding: 12px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">Accidental Clicks (Jitter)</td>
-      <td align="center" style="padding: 12px; font-size: 14px; color: #ff5555; border: none;">❌ Constant micro-clicking</td>
-      <td align="center" style="padding: 12px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ Magnetic Schmitt Latch Latching</td>
+      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">🛡️ **Accidental Auto-Clicks**</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #ff5555; border: none;">❌ Irritating micro-clicks</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ Schmitt Latch Latching</td>
     </tr>
   </tbody>
 </table>
@@ -80,54 +81,58 @@ Traditional gesture mouse systems suffer from cursor jitter, high latency, and e
 
 ---
 
-## 🔮 Futuristic Features Dashboard
+## 🔮 Interactive Feature Showcases
 
 <br>
 
-<!-- ALTERNATING COLUMN 1: WIN32 ACCELERATION & DPI -->
-<table width="100%" style="border-collapse: collapse; border: none; background: transparent; margin-bottom: 20px;">
+<!-- FEATURE BLOCK 1: WIN32 ACCELERATION -->
+<table width="100%" style="border-collapse: collapse; border: none; background: transparent; margin-bottom: 25px;">
   <tr style="border: none; background: transparent;">
     <td width="55%" style="padding: 20px 10px; border: none; vertical-align: middle;">
-      <span style="background: rgba(0, 255, 128, 0.1); color: #00FF80; font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 20px; border: 1px solid rgba(0, 255, 128, 0.3);">OS LEVEL PERFORMANCE</span>
-      <h2 style="margin-top: 10px; color: #ffffff; font-size: 24px; font-weight: 700;">⚡ win32 Kernel Acceleration & DPI Awareness</h2>
-      <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 10px;">
-        AeroGlide completely bypasses standard high-level cursor automation libraries by calling the kernel-level Windows <b>User32 API</b> (<code>SetCursorPos</code> and <code>mouse_event</code>) directly via Python ctypes. Clicks, drags, and scrolling are injected directly into the OS. By calling <code>SetProcessDPIAware()</code>, tracking matches 1:1 with physical screen pixels on Windows laptops, overcoming 125%/150% display scaling issues.
+      <span style="background: rgba(0, 255, 128, 0.1); color: #00FF80; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 255, 128, 0.3); font-family: 'Outfit';">OS HARDWARE ACCELERATION</span>
+      <h2 style="margin-top: 10px; color: #ffffff; font-size: 26px; font-weight: 800; font-family: 'Outfit'; border-bottom: none;">⚡ win32 Kernel Acceleration & DPI Awareness</h2>
+      <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 12px; font-family: 'Inter';">
+        AeroGlide completely bypasses standard high-level cursor automation libraries by calling the kernel-level Windows <b>User32 API</b> (<code>SetCursorPos</code> and <code>mouse_event</code>) directly via Python ctypes. By calling <code>SetProcessDPIAware()</code>, tracking matches 1:1 with physical screen pixels on Windows laptops, overcoming 125%/150% display scaling issues.
       </p>
     </td>
     <td width="45%" style="padding: 10px; border: none; text-align: right;">
-      <img src="assets/ui_mockup.png" alt="AeroGlide UI Overlay" width="100%" style="border-radius: 12px; border: 1px solid #2c2c35; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
+      <img src="assets/ui_mockup.png" alt="AeroGlide UI Overlay" width="100%" style="border-radius: 16px; border: 2px solid #2c2c35; box-shadow: 0 15px 45px rgba(0,0,0,0.5);">
     </td>
   </tr>
 </table>
 
-<!-- ALTERNATING COLUMN 2: GEOMETRIC PROPORTIONS -->
-<table width="100%" style="border-collapse: collapse; border: none; background: transparent; margin-bottom: 20px;">
+<br>
+
+<!-- FEATURE BLOCK 2: GEOMETRIC PROPORTIONS -->
+<table width="100%" style="border-collapse: collapse; border: none; background: transparent; margin-bottom: 25px;">
   <tr style="border: none; background: transparent;">
     <td width="45%" style="padding: 10px; border: none;">
-      <img src="assets/banner.png" alt="AeroGlide Scale Box" width="100%" style="border-radius: 12px; border: 1px solid #2c2c35; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
+      <img src="assets/banner.png" alt="AeroGlide Scale Box" width="100%" style="border-radius: 16px; border: 2px solid #2c2c35; box-shadow: 0 15px 45px rgba(0,0,0,0.5);">
     </td>
     <td width="55%" style="padding: 20px 20px; border: none; vertical-align: middle;">
-      <span style="background: rgba(0, 223, 255, 0.1); color: #00DFFF; font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 20px; border: 1px solid rgba(0, 223, 255, 0.3);">GEOMETRIC ALGORITHMS</span>
-      <h2 style="margin-top: 10px; color: #ffffff; font-size: 24px; font-weight: 700;">📐 Proportional & Rotation Independent Tracking</h2>
-      <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 10px;">
+      <span style="background: rgba(0, 223, 255, 0.1); color: #00DFFF; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 223, 255, 0.3); font-family: 'Outfit';">GEOMETRIC PROPORTIONS</span>
+      <h2 style="margin-top: 10px; color: #ffffff; font-size: 26px; font-weight: 800; font-family: 'Outfit'; border-bottom: none;">📐 Proportional & Rotation Independent Tracking</h2>
+      <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 12px; font-family: 'Inter';">
         Traditional gesture systems fail when the hand is tilted or when the back of the hand faces the camera. AeroGlide uses <b>Proportional Euclidean Distances to the Wrist</b> normalized by the dynamic palm size $H = \text{distance}(\text{Wrist}, \text{Middle MCP})$. This scale and rotation-independent algorithm guarantees flawless tracking regardless of whether your hand is kept straight, sideways, palm-facing, or back-facing!
       </p>
     </td>
   </tr>
 </table>
 
-<!-- ALTERNATING COLUMN 3: SMOOTHING & HYSTERESIS -->
-<table width="100%" style="border-collapse: collapse; border: none; background: transparent;">
+<br>
+
+<!-- FEATURE BLOCK 3: SMOOTHING & HYSTERESIS -->
+<table width="100%" style="border-collapse: collapse; border: none; background: transparent; margin-bottom: 20px;">
   <tr style="border: none; background: transparent;">
     <td width="55%" style="padding: 20px 10px; border: none; vertical-align: middle;">
-      <span style="background: rgba(255, 64, 64, 0.1); color: #FF4040; font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 20px; border: 1px solid rgba(255, 64, 64, 0.3);">INTERACTION COGNITION</span>
-      <h2 style="margin-top: 10px; color: #ffffff; font-size: 24px; font-weight: 700;">🛡️ Schmitt Trigger Click Latch & Adaptive Filtering</h2>
-      <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 10px;">
+      <span style="background: rgba(255, 64, 64, 0.1); color: #FF4040; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(255, 64, 64, 0.3); font-family: 'Outfit';">COGNITIVE LATENCY LATCH</span>
+      <h2 style="margin-top: 10px; color: #ffffff; font-size: 26px; font-weight: 800; font-family: 'Outfit'; border-bottom: none;">🛡️ Schmitt Trigger Click Latch & Adaptive Filtering</h2>
+      <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 12px; font-family: 'Inter';">
         AeroGlide integrates an intelligent <b>Adaptive Exponential Smoother</b> that automatically increases damping at slow speeds to eliminate micro-tremors (pixel-perfect precision) and decreases damping at high speeds to achieve zero dragging latency. Accidental hover clicks are blocked by a <b>Schmitt Trigger (Hysteresis latch)</b>: clicks activate below <code>0.032</code> units and only release when fingers open beyond <code>0.047</code>, giving a smooth "magnetic" latch feel!
       </p>
     </td>
     <td width="45%" style="padding: 10px; border: none; text-align: right;">
-      <img src="https://raw.githubusercontent.com/andryback/andryback/main/images/divider.gif" width="100%" style="opacity: 0.5;">
+      <img src="https://raw.githubusercontent.com/andryback/andryback/main/images/divider.gif" width="100%" style="opacity: 0.35;">
     </td>
   </tr>
 </table>
@@ -136,7 +141,7 @@ Traditional gesture mouse systems suffer from cursor jitter, high latency, and e
 
 ---
 
-## 🎮 Interactive Gesture Reference Panel
+## 🎮 Interactive Gesture Dashboard
 
 AeroGlide maps your natural hand shapes into highly fluid desktop actions. Learn the standard gestures below:
 
@@ -145,30 +150,30 @@ AeroGlide maps your natural hand shapes into highly fluid desktop actions. Learn
 <table width="100%" style="border-collapse: collapse; border: none; background: transparent;">
   <tr style="border: none; background: transparent;">
     <td width="25%" style="padding: 10px; border: none;">
-      <div style="background: #141416; border: 1px solid #2c2c35; border-radius: 12px; padding: 15px; text-align: center; height: 190px;">
-        <span style="font-size: 32px;">☝️</span>
-        <h4 style="margin: 10px 0 5px; color: #ffffff; font-size: 15px;">Cursor Moving</h4>
+      <div style="background: #141416; border: 1px solid #2c2c35; border-radius: 16px; padding: 20px; text-align: center; height: 210px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+        <span style="font-size: 36px;">☝️</span>
+        <h4 style="margin: 12px 0 6px; color: #ffffff; font-size: 16px; font-weight: bold;">Cursor Moving</h4>
         <p style="font-size: 12px; color: #8a8a93; line-height: 1.5; margin: 0;">Extend only your index finger. Move hand inside the green zone to control the cursor.</p>
       </div>
     </td>
     <td width="25%" style="padding: 10px; border: none;">
-      <div style="background: #141416; border: 1px solid #2c2c35; border-radius: 12px; padding: 15px; text-align: center; height: 190px;">
-        <span style="font-size: 32px;">🤌</span>
-        <h4 style="margin: 10px 0 5px; color: #ffffff; font-size: 15px;">Left Click & Drag</h4>
+      <div style="background: #141416; border: 1px solid #2c2c35; border-radius: 16px; padding: 20px; text-align: center; height: 210px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+        <span style="font-size: 36px;">🤌</span>
+        <h4 style="margin: 12px 0 6px; color: #ffffff; font-size: 16px; font-weight: bold;">Left Click & Drag</h4>
         <p style="font-size: 12px; color: #8a8a93; line-height: 1.5; margin: 0;">Pinch Index & Thumb. Quick pinch triggers a Click; hold pinch for >0.4s to Drag & Drop.</p>
       </div>
     </td>
     <td width="25%" style="padding: 10px; border: none;">
-      <div style="background: #141416; border: 1px solid #2c2c35; border-radius: 12px; padding: 15px; text-align: center; height: 190px;">
-        <span style="font-size: 32px;">✌️</span>
-        <h4 style="margin: 10px 0 5px; color: #ffffff; font-size: 15px;">Right Click & Scroll</h4>
+      <div style="background: #141416; border: 1px solid #2c2c35; border-radius: 16px; padding: 20px; text-align: center; height: 210px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+        <span style="font-size: 36px;">✌️</span>
+        <h4 style="margin: 12px 0 6px; color: #ffffff; font-size: 16px; font-weight: bold;">Right Click & Scroll</h4>
         <p style="font-size: 12px; color: #8a8a93; line-height: 1.5; margin: 0;">Pinch Middle & Thumb for Right Click. Hold Index & Middle together and slide to Scroll.</p>
       </div>
     </td>
     <td width="25%" style="padding: 10px; border: none;">
-      <div style="background: #141416; border: 1px solid #2c2c35; border-radius: 12px; padding: 15px; text-align: center; height: 190px;">
-        <span style="font-size: 32px;">🖐️</span>
-        <h4 style="margin: 10px 0 5px; color: #ffffff; font-size: 15px;">Zoom In / Out</h4>
+      <div style="background: #141416; border: 1px solid #2c2c35; border-radius: 16px; padding: 20px; text-align: center; height: 210px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+        <span style="font-size: 36px;">🖐️</span>
+        <h4 style="margin: 12px 0 6px; color: #ffffff; font-size: 16px; font-weight: bold;">Zoom In / Out</h4>
         <p style="font-size: 12px; color: #8a8a93; line-height: 1.5; margin: 0;">Open your hand completely. Spread Index & Thumb to Zoom In; pinch them close to Zoom Out.</p>
       </div>
     </td>
@@ -206,53 +211,32 @@ graph TD
     J & L & N & P --> Q[Real-time CustomTkinter GUI HUD Panel]
 ```
 
----
-
-## 📦 Directory Blueprint
-
-```
-aero-glide/
-│
-├── assets/
-│   ├── banner.png          # High-tech abstract neon repository banner
-│   └── ui_mockup.png       # Futuristic gesture overlay interface mockup
-│
-├── app.py                  # CustomTkinter Dark Mode GUI HUD calibration panel
-├── gesture_engine.py       # win32 low-level inputs, DPI awareness & proportional engine
-├── smooth.py               # Dynamic double exponential smoothing mathematical filter
-├── video_stream.py         # Background threaded camera capture wrapper
-└── README.md               # Gorgeous project e-manual landing page
-```
+<br>
 
 ---
 
-## 📥 Quick Setup Guide
+## 📥 Quick Start E-Terminal
 
-### 🧬 Prerequisites
-* **Windows OS** (required for ctypes lower win32 kernel mouse triggers).
-* **Python 3.12** (essential for stable MediaPipe Solution pre-built binary distributions).
+To make this project feel extremely high-end, copy and run these commands from our interactive mock-terminal block:
 
-### ⚡ Installation Commands
-
-Copy and run the following commands in your Command Prompt (cmd) / PowerShell:
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/idusha-manaka/aero-glide.git
-cd aero-glide
-
-# 2. Install core stable dependencies (specifically MediaPipe 0.10.14)
-pip install mediapipe==0.10.14 pyautogui customtkinter opencv-python
-
-# 3. Launch the futuristic UI Control panel!
-python app.py
 ```
+┌────────────────────────────────────────────────────────────────────────┐
+│  idusha-manaka @ aero-glide ~                                          │
+├────────────────────────────────────────────────────────────────────────┤
+│  $ git clone https://github.com/idusha-manaka/aero-glide.git           │
+│  $ cd aero-glide                                                       │
+│  $ pip install mediapipe==0.10.14 pyautogui customtkinter opencv-python │
+│  $ python app.py                                                       │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+<br>
 
 ---
 
-## ⚙️ Calibration & Sensitivity Controls
+## ⚙️ Calibration & Customization
 
-AeroGlide comes with a real-time dark-theme GUI control panel to easily calibrate pointer response to fit your workspace:
+AeroGlide features a real-time dark-theme GUI control panel to easily calibrate pointer response to fit your workspace:
 
 <details>
   <summary><b>🔍 View Advanced Calibration Details</b></summary>
