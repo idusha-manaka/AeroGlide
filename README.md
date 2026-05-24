@@ -1,41 +1,46 @@
 <!-- DYNAMIC GRADIENT ANIMATED WAVING HEADER -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=111520,1a2333&height=220&section=header&text=AeroGlide&fontSize=62&fontColor=00FF80&desc=Next-Gen%20Virtual%20Gesture%20Touchpad%20for%20Windows&descColor=ffffff&descSize=18&animation=fadeIn" width="100%" alt="AeroGlide Animated Title">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=d946ef,00f0ff&height=220&section=header&text=AeroGlide&fontSize=62&fontColor=ffffff&desc=Next-Gen%20Virtual%20Gesture%20Touchpad%20for%20Windows&descColor=00f0ff&descSize=18&animation=fadeIn" width="100%" alt="AeroGlide Animated Title">
 </p>
 
 <!-- DYNAMIC TYPING SVG HEADER -->
 <p align="center">
   <a href="https://github.com/idusha-manaka/AeroGlide">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Outfit&size=30&duration=2000&pause=800&color=00FF80&center=true&vCenter=true&width=600&lines=🔮+THE+FUTURE+OF+DESKTOP+NAVIGATION;⚡+LOW-LEVEL+OS+INPUT+ACCELERATION;💎+PREMIUM+CYBERPUNK+AESTHETICS" alt="AeroGlide Title Animation" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Outfit&size=30&duration=2000&pause=800&color=00F0FF&center=true&vCenter=true&width=600&lines=🔮+THE+FUTURE+OF+DESKTOP+NAVIGATION;⚡+LOW-LEVEL+OS+INPUT+ACCELERATION;🌸+PREMIUM+CYBERPUNK+ANIME+AESTHETICS" alt="AeroGlide Title Animation" />
   </a>
+</p>
+
+<!-- CUTE TRANSPARENT ANIME PIXEL LOOPING GIF -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/innng/innng/master/assets/kyubey.gif" alt="Kyubey Cyber Companion" width="85" style="margin: 10px 0; filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.45));">
 </p>
 
 <!-- HIGH-CONTRAST METRICS & OS SHIELDS -->
 <p align="center">
   <a href="https://github.com/idusha-manaka/AeroGlide">
-    <img src="https://img.shields.io/github/stars/idusha-manaka/AeroGlide?style=for-the-badge&color=00FF80&logo=github&logoColor=black" alt="GitHub stars">
+    <img src="https://img.shields.io/github/stars/idusha-manaka/AeroGlide?style=for-the-badge&color=FF007F&logo=github&logoColor=white" alt="GitHub stars">
   </a>
   <img src="https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Support">
   <img src="https://img.shields.io/badge/Python-3.12%20Recommended-3776AB?style=for-the-badge&logo=python&logoColor=yellow" alt="Python 3.12">
   <img src="https://img.shields.io/badge/Core-ctypes%20kernel-FF007F?style=for-the-badge" alt="win32 ctypes">
-  <img src="https://img.shields.io/badge/Performance-30+%20FPS-FFFF00?style=for-the-badge" alt="FPS Performance">
+  <img src="https://img.shields.io/badge/Interface-Cyberpunk%20HUD-00F0FF?style=for-the-badge" alt="HUD UI">
 </p>
 
 <!-- NEON PANORAMIC REPOSITORY BANNER -->
 <p align="center">
-  <img src="assets/wide_banner.png" alt="AeroGlide Panoramic HUD Banner" width="100%" style="border-radius: 16px; border: 2px solid #2c2c35; box-shadow: 0 15px 45px rgba(0, 255, 128, 0.15);">
+  <img src="assets/wide_banner.png" alt="AeroGlide Panoramic HUD Banner" width="100%" style="border-radius: 16px; border: 2.5px solid #FF007F; box-shadow: 0 15px 45px rgba(255, 0, 127, 0.25);">
 </p>
 
 <!-- HIGH-TECH GLOWING DIVIDER -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/andryback/andryback/main/images/divider.gif" width="100%" alt="Neon Divider" style="margin: 25px 0;">
+  <img src="https://raw.githubusercontent.com/andryback/andryback/main/images/divider.gif" width="100%" alt="Neon Divider" style="margin: 25px 0; filter: hue-rotate(120deg);">
 </p>
 
 <br>
 
 ---
 
-## 💎 The AeroGlide Advantage
+## 🌸 The AeroGlide Advantage
 
 Traditional virtual touchpads suffer from severe cursor drift, click latency, and coordinate scaling issues. AeroGlide uses low-level Windows kernel simulation and dynamic hand-scaling to deliver a flawless, high-fidelity experience:
 
@@ -43,37 +48,37 @@ Traditional virtual touchpads suffer from severe cursor drift, click latency, an
 
 <table width="100%" style="border-collapse: collapse; border: none; background: transparent;">
   <thead>
-    <tr style="background: #141416; border-bottom: 2px solid #2c2c35;">
-      <th align="left" width="40%" style="padding: 14px; font-size: 15px; color: #a0a0ab; border: none;">Feature Checklist</th>
-      <th align="center" width="30%" style="padding: 14px; font-size: 15px; color: #FF4040; border: none;">Standard Mouse Apps</th>
-      <th align="center" width="30%" style="padding: 14px; font-size: 15px; color: #00FF80; border: none;">AeroGlide Touchpad</th>
+    <tr style="background: #0d0b16; border-bottom: 2px solid #311c42;">
+      <th align="left" width="40%" style="padding: 14px; font-size: 15px; color: #b4b4c6; border: none;">Feature Checklist</th>
+      <th align="center" width="30%" style="padding: 14px; font-size: 15px; color: #ff0055; border: none;">Standard Mouse Apps</th>
+      <th align="center" width="30%" style="padding: 14px; font-size: 15px; color: #00F0FF; border: none;">AeroGlide Touchpad</th>
     </tr>
   </thead>
   <tbody>
-    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+    <tr style="border-bottom: 1px solid #201a30; background: transparent;">
       <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">⚡ **Input Execution Latency**</td>
-      <td align="center" style="padding: 14px; font-size: 14px; color: #ff5555; border: none;">🔴 High Lag (30ms - 50ms)</td>
-      <td align="center" style="padding: 14px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">🟢 Instant (Zero-Lag win32)</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #ff3366; border: none;">🔴 High Lag (30ms - 50ms)</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #00F0FF; font-weight: 600; border: none;">🟢 Instant (Zero-Lag win32)</td>
     </tr>
-    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+    <tr style="border-bottom: 1px solid #201a30; background: transparent;">
       <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">🖥️ **DPI Scaling (125%/150%)**</td>
-      <td align="center" style="padding: 14px; font-size: 14px; color: #ff5555; border: none;">❌ Stuck (fails on laptop screens)</td>
-      <td align="center" style="padding: 14px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ 1:1 Pixel-Perfect DPI Aware</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #ff3366; border: none;">❌ Stuck (fails on laptop screens)</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #00F0FF; font-weight: 600; border: none;">✅ 1:1 Pixel-Perfect DPI Aware</td>
     </tr>
-    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+    <tr style="border-bottom: 1px solid #201a30; background: transparent;">
       <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">📈 **Cursor Precision Damping**</td>
-      <td align="center" style="padding: 14px; font-size: 14px; color: #ff5555; border: none;">❌ Unstable (high tremor jitter)</td>
-      <td align="center" style="padding: 14px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ Adaptive Smoothing Filter</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #ff3366; border: none;">❌ Unstable (high tremor jitter)</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #00F0FF; font-weight: 600; border: none;">✅ Adaptive Smoothing Filter</td>
     </tr>
-    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+    <tr style="border-bottom: 1px solid #201a30; background: transparent;">
       <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">📐 **Hand Tilt & Orientation**</td>
-      <td align="center" style="padding: 14px; font-size: 14px; color: #ff5555; border: none;">❌ Fails (strict y-axis targets)</td>
-      <td align="center" style="padding: 14px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ Rotation-Independent Ratios</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #ff3366; border: none;">❌ Fails (strict y-axis targets)</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #00F0FF; font-weight: 600; border: none;">✅ Rotation-Independent Ratios</td>
     </tr>
     <tr style="border-bottom: none; background: transparent;">
       <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">🛡️ **Accidental Auto-Clicks**</td>
-      <td align="center" style="padding: 14px; font-size: 14px; color: #ff5555; border: none;">❌ Irritating micro-clicks</td>
-      <td align="center" style="padding: 14px; font-size: 14px; color: #00FF80; font-weight: 600; border: none;">✅ Schmitt Latch Latching</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #ff3366; border: none;">❌ Irritating micro-clicks</td>
+      <td align="center" style="padding: 14px; font-size: 14px; color: #00F0FF; font-weight: 600; border: none;">✅ Schmitt Latch Latching</td>
     </tr>
   </tbody>
 </table>
@@ -90,14 +95,14 @@ Traditional virtual touchpads suffer from severe cursor drift, click latency, an
 <table width="100%" style="border-collapse: collapse; border: none; background: transparent; margin-bottom: 25px;">
   <tr style="border: none; background: transparent;">
     <td width="55%" style="padding: 20px 10px; border: none; vertical-align: middle;">
-      <span style="background: rgba(0, 255, 128, 0.1); color: #00FF80; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 255, 128, 0.3); font-family: 'Outfit';">OS LEVEL PERFORMANCE</span>
+      <span style="background: rgba(0, 240, 255, 0.1); color: #00F0FF; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 240, 255, 0.3); font-family: 'Outfit';">OS LEVEL PERFORMANCE</span>
       <h2 style="margin-top: 10px; color: #ffffff; font-size: 26px; font-weight: 800; font-family: 'Outfit'; border-bottom: none;">⚡ win32 Kernel Acceleration & DPI Awareness</h2>
-      <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 12px; font-family: 'Inter';">
+      <p style="font-size: 14px; color: #b4b4c6; line-height: 1.6; margin-top: 12px; font-family: 'Inter';">
         AeroGlide completely bypasses standard high-level cursor automation libraries by calling the kernel-level Windows <b>User32 API</b> (<code>SetCursorPos</code> and <code>mouse_event</code>) directly via Python ctypes. Clicks, drags, and scrolling are injected directly into the OS. By calling <code>SetProcessDPIAware()</code>, tracking matches 1:1 with physical screen pixels on Windows laptops, overcoming 125%/150% display scaling issues.
       </p>
     </td>
     <td width="45%" style="padding: 10px; border: none; text-align: right;">
-      <img src="assets/ui_mockup.png" alt="AeroGlide UI Overlay" width="100%" style="border-radius: 16px; border: 2px solid #2c2c35; box-shadow: 0 15px 45px rgba(0,0,0,0.5);">
+      <img src="assets/ui_mockup.png" alt="AeroGlide UI Overlay" width="100%" style="border-radius: 16px; border: 2px solid #FF007F; box-shadow: 0 15px 45px rgba(255, 0, 127, 0.15);">
     </td>
   </tr>
 </table>
@@ -108,12 +113,12 @@ Traditional virtual touchpads suffer from severe cursor drift, click latency, an
 <table width="100%" style="border-collapse: collapse; border: none; background: transparent; margin-bottom: 25px;">
   <tr style="border: none; background: transparent;">
     <td width="45%" style="padding: 10px; border: none;">
-      <img src="assets/wide_banner.png" alt="AeroGlide Scale Box" width="100%" style="border-radius: 16px; border: 2px solid #2c2c35; box-shadow: 0 15px 45px rgba(0,0,0,0.5);">
+      <img src="assets/wide_banner.png" alt="AeroGlide Scale Box" width="100%" style="border-radius: 16px; border: 2px solid #00F0FF; box-shadow: 0 15px 45px rgba(0, 240, 255, 0.15);">
     </td>
     <td width="55%" style="padding: 20px 20px; border: none; vertical-align: middle;">
-      <span style="background: rgba(0, 223, 255, 0.1); color: #00DFFF; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 223, 255, 0.3); font-family: 'Outfit';">GEOMETRIC ALGORITHMS</span>
+      <span style="background: rgba(255, 0, 127, 0.1); color: #FF007F; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(255, 0, 127, 0.3); font-family: 'Outfit';">GEOMETRIC ALGORITHMS</span>
       <h2 style="margin-top: 10px; color: #ffffff; font-size: 26px; font-weight: 800; font-family: 'Outfit'; border-bottom: none;">📐 Proportional & Rotation Independent Tracking</h2>
-      <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 12px; font-family: 'Inter';">
+      <p style="font-size: 14px; color: #b4b4c6; line-height: 1.6; margin-top: 12px; font-family: 'Inter';">
         Traditional gesture systems fail when the hand is tilted or when the back of the hand faces the camera. AeroGlide uses <b>Proportional Euclidean Distances to the Wrist</b> normalized by the dynamic palm size $H = \text{distance}(\text{Wrist}, \text{Middle MCP})$. This scale and rotation-independent algorithm guarantees flawless tracking regardless of whether your hand is kept straight, sideways, palm-facing, or back-facing!
       </p>
     </td>
@@ -126,14 +131,14 @@ Traditional virtual touchpads suffer from severe cursor drift, click latency, an
 <table width="100%" style="border-collapse: collapse; border: none; background: transparent; margin-bottom: 20px;">
   <tr style="border: none; background: transparent;">
     <td width="55%" style="padding: 20px 10px; border: none; vertical-align: middle;">
-      <span style="background: rgba(255, 64, 64, 0.1); color: #FF4040; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(255, 64, 64, 0.3); font-family: 'Outfit';">COGNITIVE LATENCY LATCH</span>
+      <span style="background: rgba(0, 240, 255, 0.1); color: #00F0FF; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 240, 255, 0.3); font-family: 'Outfit';">COGNITIVE LATENCY LATCH</span>
       <h2 style="margin-top: 10px; color: #ffffff; font-size: 26px; font-weight: 800; font-family: 'Outfit'; border-bottom: none;">🛡️ Schmitt Trigger Click Latch & Adaptive Filtering</h2>
-      <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 12px; font-family: 'Inter';">
+      <p style="font-size: 14px; color: #b4b4c6; line-height: 1.6; margin-top: 12px; font-family: 'Inter';">
         AeroGlide integrates an intelligent <b>Adaptive Exponential Smoother</b> that automatically increases damping at slow speeds to eliminate micro-tremors (pixel-perfect precision) and decreases damping at high speeds to achieve zero dragging latency. Accidental hover clicks are blocked by a <b>Schmitt Trigger (Hysteresis latch)</b>: clicks activate below <code>0.032</code> units and only release when fingers open beyond <code>0.047</code>, giving a smooth "magnetic" latch feel!
       </p>
     </td>
     <td width="45%" style="padding: 10px; border: none; text-align: right;">
-      <img src="assets/banner.png" alt="AeroGlide Hands Tracking Latch Visual" width="100%" style="border-radius: 16px; border: 2px solid #2c2c35; box-shadow: 0 15px 45px rgba(0, 255, 128, 0.15);">
+      <img src="assets/banner.png" alt="AeroGlide Hands Tracking Latch Visual" width="100%" style="border-radius: 16px; border: 2px solid #FF007F; box-shadow: 0 15px 45px rgba(255, 0, 127, 0.2);">
     </td>
   </tr>
 </table>
@@ -150,47 +155,47 @@ To achieve hardware-accelerated 30+ FPS butter-smooth navigation, your Windows d
 
 <table width="100%" style="border-collapse: collapse; border: none; background: transparent;">
   <thead>
-    <tr style="background: #141416; border-bottom: 2px solid #2c2c35;">
-      <th align="left" width="30%" style="padding: 12px; border: none; color: #a0a0ab; font-size:15px;">System Resource</th>
-      <th align="left" width="35%" style="padding: 12px; border: none; color: #ff9d00; font-size:15px;">Minimum Requirement</th>
-      <th align="left" width="35%" style="padding: 12px; border: none; color: #00FF80; font-size:15px;">Recommended Target (Optimal)</th>
+    <tr style="background: #0d0b16; border-bottom: 2px solid #311c42;">
+      <th align="left" width="30%" style="padding: 12px; border: none; color: #b4b4c6; font-size:15px;">System Resource</th>
+      <th align="left" width="35%" style="padding: 12px; border: none; color: #ff007f; font-size:15px;">Minimum Requirement</th>
+      <th align="left" width="35%" style="padding: 12px; border: none; color: #00F0FF; font-size:15px;">Recommended Target (Optimal)</th>
     </tr>
   </thead>
   <tbody>
-    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+    <tr style="border-bottom: 1px solid #201a30; background: transparent;">
       <td style="padding: 12px; font-weight: bold; border: none; color: #e0e0e5;">Operating System</td>
-      <td style="padding: 12px; border: none; color: #b0b0b5;">Windows 10 (64-bit, Build 19044+)</td>
-      <td style="padding: 12px; border: none; color: #00FF80; font-weight:600;">Windows 11 (64-bit, Build 22000+)</td>
+      <td style="padding: 12px; border: none; color: #b4b4c6;">Windows 10 (64-bit, Build 19044+)</td>
+      <td style="padding: 12px; border: none; color: #00F0FF; font-weight:600;">Windows 11 (64-bit, Build 22000+)</td>
     </tr>
-    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+    <tr style="border-bottom: 1px solid #201a30; background: transparent;">
       <td style="padding: 12px; font-weight: bold; border: none; color: #e0e0e5;">Python Runtime</td>
-      <td style="padding: 12px; border: none; color: #b0b0b5;">Python 3.11.x (Stable x64)</td>
-      <td style="padding: 12px; border: none; color: #00FF80; font-weight:600;">Python 3.12.x (Highly Optimized MediaPipe wheels)</td>
+      <td style="padding: 12px; border: none; color: #b4b4c6;">Python 3.11.x (Stable x64)</td>
+      <td style="padding: 12px; border: none; color: #00F0FF; font-weight:600;">Python 3.12.x (Highly Optimized MediaPipe wheels)</td>
     </tr>
-    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+    <tr style="border-bottom: 1px solid #201a30; background: transparent;">
       <td style="padding: 12px; font-weight: bold; border: none; color: #e0e0e5;">Webcam Sensor</td>
-      <td style="padding: 12px; border: none; color: #b0b0b5;">Integrated HD Web Camera (720p @ 30 FPS)</td>
-      <td style="padding: 12px; border: none; color: #00FF80; font-weight:600;">USB Web Camera (1080p @ 60 FPS / Low-exposure)</td>
+      <td style="padding: 12px; border: none; color: #b4b4c6;">Integrated HD Web Camera (720p @ 30 FPS)</td>
+      <td style="padding: 12px; border: none; color: #00F0FF; font-weight:600;">USB Web Camera (1080p @ 60 FPS / Low-exposure)</td>
     </tr>
-    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+    <tr style="border-bottom: 1px solid #201a30; background: transparent;">
       <td style="padding: 12px; font-weight: bold; border: none; color: #e0e0e5;">CPU Processor</td>
-      <td style="padding: 12px; border: none; color: #b0b0b5;">Intel Core i3 / AMD Ryzen 3 (Dual-Core @ 2.0 GHz)</td>
-      <td style="padding: 12px; border: none; color: #00FF80; font-weight:600;">Intel Core i5 / AMD Ryzen 5 (Quad-Core @ 3.0 GHz+)</td>
+      <td style="padding: 12px; border: none; color: #b4b4c6;">Intel Core i3 / AMD Ryzen 3 (Dual-Core @ 2.0 GHz)</td>
+      <td style="padding: 12px; border: none; color: #00F0FF; font-weight:600;">Intel Core i5 / AMD Ryzen 5 (Quad-Core @ 3.0 GHz+)</td>
     </tr>
-    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+    <tr style="border-bottom: 1px solid #201a30; background: transparent;">
       <td style="padding: 12px; font-weight: bold; border: none; color: #e0e0e5;">System Memory (RAM)</td>
-      <td style="padding: 12px; border: none; color: #b0b0b5;">4 GB RAM</td>
-      <td style="padding: 12px; border: none; color: #00FF80; font-weight:600;">8 GB RAM or Higher</td>
+      <td style="padding: 12px; border: none; color: #b4b4c6;">4 GB RAM</td>
+      <td style="padding: 12px; border: none; color: #00F0FF; font-weight:600;">8 GB RAM or Higher</td>
     </tr>
-    <tr style="border-bottom: 1px solid #1E1E24; background: transparent;">
+    <tr style="border-bottom: 1px solid #201a30; background: transparent;">
       <td style="padding: 12px; font-weight: bold; border: none; color: #e0e0e5;">GPU Co-Processor</td>
-      <td style="padding: 12px; border: none; color: #b0b0b5;">Direct3D 11 Compatible Integrated Graphics</td>
-      <td style="padding: 12px; border: none; color: #00FF80; font-weight:600;">NVIDIA GeForce / AMD Radeon Dedicated GPU (CUDA acceleration)</td>
+      <td style="padding: 12px; border: none; color: #b4b4c6;">Direct3D 11 Compatible Integrated Graphics</td>
+      <td style="padding: 12px; border: none; color: #00F0FF; font-weight:600;">NVIDIA GeForce / AMD Radeon Dedicated GPU (CUDA acceleration)</td>
     </tr>
     <tr style="border-bottom: none; background: transparent;">
       <td style="padding: 12px; font-weight: bold; border: none; color: #e0e0e5;">Display Support</td>
-      <td style="padding: 12px; border: none; color: #b0b0b5;">Standard 1080p Desktop Display (100% DPI Scaling)</td>
-      <td style="padding: 12px; border: none; color: #00FF80; font-weight:600;">High-DPI Laptop Display (125% - 150% scaling, fully aware)</td>
+      <td style="padding: 12px; border: none; color: #b4b4c6;">Standard 1080p Desktop Display (100% DPI Scaling)</td>
+      <td style="padding: 12px; border: none; color: #00F0FF; font-weight:600;">High-DPI Laptop Display (125% - 150% scaling, fully aware)</td>
     </tr>
   </tbody>
 </table>
@@ -204,13 +209,13 @@ To achieve hardware-accelerated 30+ FPS butter-smooth navigation, your Windows d
 
 ## 🎮 Highly Detailed Gesture Blueprint
 
-AeroGlide parses hand landmarks proportionally based on Euclidean matrices. The following responsive SVG diagram details each supported hand gesture. 
+AeroGlide parses hand landmarks proportionally based on Euclidean matrices. The following responsive SVG diagram details each supported hand gesture.
 
 > [!TIP]
 > **Theme Adaptive View:** The vector diagram below is dynamically stylized with embedded media queries. It will automatically adjust its backgrounds, stroke outlines, and text colors to look absolutely gorgeous whether you use **GitHub Dark Mode** or **GitHub Light Mode**!
 
 <p align="center">
-  <img src="assets/gestures_blueprint.svg" alt="AeroGlide Gesture Blueprint" width="100%" style="border-radius: 12px; border: 1.5px solid #2c2c35; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
+  <img src="assets/gestures_blueprint.svg" alt="AeroGlide Gesture Blueprint" width="100%" style="border-radius: 12px; border: 1.5px solid #FF007F; box-shadow: 0 10px 30px rgba(255, 0, 127, 0.2);">
 </p>
 
 ### 1. ☝️ Cursor Navigation
@@ -475,9 +480,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🤝 Community & Support
 <p align="center">
   <a href="https://github.com/idusha-manaka">
-    <img src="https://img.shields.io/badge/Developed%20By-Idusha%20Manaka-00FF80?style=for-the-badge&logo=github&logoColor=black" alt="Author Badge">
+    <img src="https://img.shields.io/badge/Developed%20By-Idusha%20Manaka-FF007F?style=for-the-badge&logo=github&logoColor=white" alt="Author Badge">
   </a>
 </p>
 
 Developed with ❤️ by [Idusha Manaka](https://github.com/idusha-manaka). Feel free to raise issues, submit pull requests, or star the repository to show your support!
+
 

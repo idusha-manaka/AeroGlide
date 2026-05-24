@@ -2,36 +2,36 @@
   <defs>
     <style>
       .bg-rect {
-        fill: #0b0f17;
-        stroke: #1e293b;
+        fill: #080b11;
+        stroke: #1e1b4b;
         stroke-width: 1.5;
         rx: 16px;
       }
       .card {
-        fill: #131b2e;
-        stroke: #1e293b;
+        fill: #0f111a;
+        stroke: #311c42;
         stroke-width: 1.5;
         rx: 12px;
         transition: all 0.3s ease;
       }
       .icon-bg {
-        fill: #1e293b;
+        fill: #1a1525;
         rx: 50%;
       }
       .accent-line {
-        stroke: #00FF80;
+        stroke: #FF007F;
         stroke-width: 2.5;
         stroke-linecap: round;
       }
       .icon-stroke {
-        stroke: #00FF80;
+        stroke: #00F0FF;
         stroke-width: 2;
         stroke-linecap: round;
         stroke-linejoin: round;
         fill: none;
       }
       .accent-dot {
-        fill: #00FF80;
+        fill: #FF007F;
       }
       .text-title {
         fill: #ffffff;
@@ -41,20 +41,20 @@
         letter-spacing: 0.5px;
       }
       .text-bullet {
-        fill: #94a3b8;
+        fill: #b4b4c6;
         font-family: 'Inter', 'Segoe UI', -apple-system, sans-serif;
         font-size: 11px;
         font-weight: 500;
       }
       .text-tag {
-        fill: #00FF80;
+        fill: #FF007F;
         font-family: 'Outfit', 'Segoe UI', -apple-system, sans-serif;
         font-size: 9px;
         font-weight: 800;
       }
       .tag-bg {
-        fill: rgba(0, 255, 128, 0.1);
-        stroke: rgba(0, 255, 128, 0.25);
+        fill: rgba(255, 0, 127, 0.1);
+        stroke: rgba(255, 0, 127, 0.25);
         stroke-width: 1;
         rx: 4px;
       }
@@ -62,37 +62,37 @@
       /* Light Theme Responsive Styles */
       @media (prefers-color-scheme: light) {
         .bg-rect {
-          fill: #f8fafc;
-          stroke: #e2e8f0;
+          fill: #fdf8fc;
+          stroke: #f3d8ea;
         }
         .card {
           fill: #ffffff;
-          stroke: #cbd5e1;
+          stroke: #e8d0e2;
         }
         .icon-bg {
-          fill: #f1f5f9;
+          fill: #fdf2f9;
         }
         .accent-line {
-          stroke: #059669;
+          stroke: #db2777;
         }
         .icon-stroke {
-          stroke: #059669;
+          stroke: #0891b2;
         }
         .accent-dot {
-          fill: #059669;
+          fill: #db2777;
         }
         .text-title {
-          fill: #0f172a;
+          fill: #1e1b4b;
         }
         .text-bullet {
-          fill: #475569;
+          fill: #4b4b6b;
         }
         .text-tag {
-          fill: #059669;
+          fill: #db2777;
         }
         .tag-bg {
-          fill: rgba(5, 150, 105, 0.08);
-          stroke: rgba(5, 150, 105, 0.2);
+          fill: rgba(219, 39, 119, 0.08);
+          stroke: rgba(219, 39, 119, 0.2);
         }
       }
     </style>
