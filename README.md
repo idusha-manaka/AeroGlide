@@ -1,6 +1,6 @@
 <!-- DYNAMIC GRADIENT ANIMATED WAVING HEADER -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=300&color=b000ff,00e5ff&text=AeroGlide&fontColor=ffffff&fontSize=75&fontAlignY=42&stroke=b000ff&strokeWidth=2&animation=fadeIn&desc=Next-Gen%20Virtual%20Gesture%20Touchpad%20for%20Windows&descColor=00e5ff&descSize=18&descAlignY=68" width="100%" alt="AeroGlide Animated Waving Title">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0d0b18,FF007F,00F0FF&height=250&section=header&text=AeroGlide&fontSize=56&fontColor=ffffff&font=Orbitron&desc=Next-Gen%20Virtual%20Gesture%20Touchpad%20for%20Windows&descColor=00f0ff&descSize=16&descAlignY=72&animation=twinkle" width="100%" alt="AeroGlide Animated Waving Title">
 </p>
 
 <!-- DYNAMIC TYPING SVG HEADER -->
@@ -17,9 +17,9 @@
 
 <!-- HIGH-TECH ANIME HUD STATUS BADGES -->
 <p align="center">
-  <span style="display: inline-block; background: rgba(0, 240, 255, 0.08); color: #00F0FF; border: 1.5px solid #00F0FF; padding: 6px 14px; border-radius: 8px; font-weight: 800; font-family: 'Outfit', 'Consolas', sans-serif; font-size: 11px; letter-spacing: 1px; margin: 4px; box-shadow: 0 0 10px rgba(0, 240, 255, 0.15);">🌸 OS // WINDOWS_10_11</span>
-  <span style="display: inline-block; background: rgba(255, 0, 127, 0.08); color: #FF007F; border: 1.5px solid #FF007F; padding: 6px 14px; border-radius: 8px; font-weight: 800; font-family: 'Outfit', 'Consolas', sans-serif; font-size: 11px; letter-spacing: 1px; margin: 4px; box-shadow: 0 0 10px rgba(255, 0, 127, 0.15);">💎 CORE // CTYPES_KERNEL</span>
-  <span style="display: inline-block; background: rgba(168, 85, 247, 0.08); color: #a855f7; border: 1.5px solid #a855f7; padding: 6px 14px; border-radius: 8px; font-weight: 800; font-family: 'Outfit', 'Consolas', sans-serif; font-size: 11px; letter-spacing: 1px; margin: 4px; box-shadow: 0 0 10px rgba(168, 85, 247, 0.15);">✨ ENGINE // 30_FPS_AI</span>
+  <img src="https://img.shields.io/badge/🌸_OS-WINDOWS_10_/_11-00F0FF?style=for-the-badge&labelColor=0d0b18&color=00F0FF" alt="OS Badge">
+  <img src="https://img.shields.io/badge/💎_CORE-CTYPES_KERNEL-FF007F?style=for-the-badge&labelColor=0d0b18&color=FF007F" alt="Core Badge">
+  <img src="https://img.shields.io/badge/✨_ENGINE-30_FPS_AI-a855f7?style=for-the-badge&labelColor=0d0b18&color=a855f7" alt="Engine Badge">
 </p>
 
 <!-- NEON PANORAMIC REPOSITORY BANNER -->
@@ -36,10 +36,8 @@
 
 <!-- ================= SECTION 1: THE AEROGLIDE ADVANTAGE ================= -->
 <div style="background: #0c0d16; border: 2px solid #FF007F; border-radius: 16px; padding: 25px; box-shadow: 0 8px 32px rgba(255, 0, 127, 0.15); margin: 30px 0;">
-  <div style="display: flex; align-items: center; margin-bottom: 20px; border-bottom: 2.5px solid #3d1b4a; padding-bottom: 12px;">
-    <span style="font-size: 24px; margin-right: 12px;">🌸</span>
-    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">The AeroGlide Advantage</h2>
-    <span style="margin-left: auto; color: #00F0FF; font-family: monospace; font-size: 11px; font-weight: bold; letter-spacing: 1px;">HUD_SYS // ACTIVE</span>
+  <div style="border-bottom: 2.5px solid #3d1b4a; padding-bottom: 12px; margin-bottom: 20px;">
+    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">🌸 The AeroGlide Advantage &nbsp;&nbsp;<code>HUD_SYS // ACTIVE</code></h2>
   </div>
   
   <p style="font-size: 14.5px; color: #b4b4c6; line-height: 1.6; font-family: 'Inter', sans-serif;">
@@ -90,15 +88,13 @@
 
 <!-- ================= SECTION 2: FUTURISTIC FEATURES SHOWCASE ================= -->
 <div style="background: #0c0d16; border: 2px solid #00F0FF; border-radius: 16px; padding: 25px; box-shadow: 0 8px 32px rgba(0, 240, 255, 0.15); margin: 30px 0;">
-  <div style="display: flex; align-items: center; margin-bottom: 25px; border-bottom: 2.5px solid #1a334d; padding-bottom: 12px;">
-    <span style="font-size: 24px; margin-right: 12px;">🔮</span>
-    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">Futuristic Features Showcase</h2>
-    <span style="margin-left: auto; color: #FF007F; font-family: monospace; font-size: 11px; font-weight: bold; letter-spacing: 1px;">SYS_ENG // STABLE</span>
+  <div style="border-bottom: 2.5px solid #1a334d; padding-bottom: 12px; margin-bottom: 25px;">
+    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">🔮 Futuristic Features Showcase &nbsp;&nbsp;<code>SYS_ENG // STABLE</code></h2>
   </div>
 
   <!-- FEATURE 1 -->
   <div style="background: #0f111a; border: 1.5px solid #FF007F; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(255, 0, 127, 0.08);">
-    <span style="background: rgba(0, 240, 255, 0.1); color: #00F0FF; font-size: 10px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 240, 255, 0.3); font-family: 'Outfit';">OS LEVEL PERFORMANCE</span>
+    <b><code>⚡ OS LEVEL PERFORMANCE</code></b>
     <h3 style="margin-top: 12px; color: #ffffff; font-size: 20px; font-weight: 800; font-family: 'Outfit';">⚡ win32 Kernel Acceleration & DPI Awareness</h3>
     <p style="font-size: 13.5px; color: #b4b4c6; line-height: 1.6; font-family: 'Inter';">
       AeroGlide completely bypasses standard high-level cursor automation libraries by calling the kernel-level Windows <b>User32 API</b> (<code>SetCursorPos</code> and <code>mouse_event</code>) directly via Python ctypes. Clicks, drags, and scrolling are injected directly into the OS. By calling <code>SetProcessDPIAware()</code>, tracking matches 1:1 with physical screen pixels on Windows laptops, overcoming 125%/150% display scaling issues.
@@ -107,7 +103,7 @@
 
   <!-- FEATURE 2 -->
   <div style="background: #0f111a; border: 1.5px solid #00F0FF; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0, 240, 255, 0.08);">
-    <span style="background: rgba(255, 0, 127, 0.1); color: #FF007F; font-size: 10px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(255, 0, 127, 0.3); font-family: 'Outfit';">GEOMETRIC ALGORITHMS</span>
+    <b><code>📐 GEOMETRIC ALGORITHMS</code></b>
     <h3 style="margin-top: 12px; color: #ffffff; font-size: 20px; font-weight: 800; font-family: 'Outfit';">📐 Proportional & Rotation Independent Tracking</h3>
     <p style="font-size: 13.5px; color: #b4b4c6; line-height: 1.6; font-family: 'Inter';">
       Traditional gesture systems fail when the hand is tilted or when the back of the hand faces the camera. AeroGlide uses <b>Proportional Euclidean Distances to the Wrist</b> normalized by the dynamic palm size $H = \text{distance}(\text{Wrist}, \text{Middle MCP})$. This scale and rotation-independent algorithm guarantees flawless tracking regardless of whether your hand is kept straight, sideways, palm-facing, or back-facing!
@@ -116,7 +112,7 @@
 
   <!-- FEATURE 3 -->
   <div style="background: #0f111a; border: 1.5px solid #FF007F; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(255, 0, 127, 0.08);">
-    <span style="background: rgba(0, 240, 255, 0.1); color: #00F0FF; font-size: 10px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 240, 255, 0.3); font-family: 'Outfit';">COGNITIVE LATENCY LATCH</span>
+    <b><code>🛡️ COGNITIVE LATENCY LATCH</code></b>
     <h3 style="margin-top: 12px; color: #ffffff; font-size: 20px; font-weight: 800; font-family: 'Outfit';">🛡️ Schmitt Trigger Click Latch & Adaptive Filtering</h3>
     <p style="font-size: 13.5px; color: #b4b4c6; line-height: 1.6; font-family: 'Inter';">
       AeroGlide integrates an intelligent <b>Adaptive Exponential Smoother</b> that automatically increases damping at slow speeds to eliminate micro-tremors (pixel-perfect precision) and decreases damping at high speeds to achieve zero dragging latency. Accidental hover clicks are blocked by a <b>Schmitt Trigger (Hysteresis latch)</b>: clicks activate below <code>0.032</code> units and only release when fingers open beyond <code>0.047</code>, giving a smooth "magnetic" latch feel!
@@ -128,10 +124,8 @@
 
 <!-- ================= SECTION 3: RECOMMENDED SPECS ================= -->
 <div style="background: #0c0d16; border: 2px solid #FF007F; border-radius: 16px; padding: 25px; box-shadow: 0 8px 32px rgba(255, 0, 127, 0.15); margin: 30px 0;">
-  <div style="display: flex; align-items: center; margin-bottom: 20px; border-bottom: 2.5px solid #3d1b4a; padding-bottom: 12px;">
-    <span style="font-size: 24px; margin-right: 12px;">🖥️</span>
-    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">Recommended Specs for Windows 10 / 11</h2>
-    <span style="margin-left: auto; color: #00F0FF; font-family: monospace; font-size: 11px; font-weight: bold; letter-spacing: 1px;">DIAG_VER // OK</span>
+  <div style="border-bottom: 2.5px solid #3d1b4a; padding-bottom: 12px; margin-bottom: 20px;">
+    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">🖥️ Recommended Specs for Windows 10 / 11 &nbsp;&nbsp;<code>DIAG_VER // OK</code></h2>
   </div>
 
   <table width="100%" style="border-collapse: collapse; border: none; background: transparent;">
@@ -195,10 +189,8 @@
 
 <!-- ================= SECTION 4: GESTURE BLUEPRINT ================= -->
 <div style="background: #0c0d16; border: 2px solid #00F0FF; border-radius: 16px; padding: 25px; box-shadow: 0 8px 32px rgba(0, 240, 255, 0.15); margin: 30px 0;">
-  <div style="display: flex; align-items: center; margin-bottom: 20px; border-bottom: 2.5px solid #1a334d; padding-bottom: 12px;">
-    <span style="font-size: 24px; margin-right: 12px;">🎮</span>
-    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">Highly Detailed Gesture Blueprint</h2>
-    <span style="margin-left: auto; color: #FF007F; font-family: monospace; font-size: 11px; font-weight: bold; letter-spacing: 1px;">GEST_ENV // RUNNING</span>
+  <div style="border-bottom: 2.5px solid #1a334d; padding-bottom: 12px; margin-bottom: 20px;">
+    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">🎮 Highly Detailed Gesture Blueprint &nbsp;&nbsp;<code>GEST_ENV // RUNNING</code></h2>
   </div>
 
   <p style="font-size: 14px; color: #b4b4c6; line-height: 1.6; font-family: 'Inter';">
@@ -263,10 +255,8 @@
 
 <!-- ================= SECTION 5: SYSTEM ARCHITECTURE ================= -->
 <div style="background: #0c0d16; border: 2px solid #FF007F; border-radius: 16px; padding: 25px; box-shadow: 0 8px 32px rgba(255, 0, 127, 0.15); margin: 30px 0;">
-  <div style="display: flex; align-items: center; margin-bottom: 20px; border-bottom: 2.5px solid #3d1b4a; padding-bottom: 12px;">
-    <span style="font-size: 24px; margin-right: 12px;">🛠️</span>
-    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">System Architecture Blueprint</h2>
-    <span style="margin-left: auto; color: #00F0FF; font-family: monospace; font-size: 11px; font-weight: bold; letter-spacing: 1px;">DIAG_FLOW // COMPLETED</span>
+  <div style="border-bottom: 2.5px solid #3d1b4a; padding-bottom: 12px; margin-bottom: 20px;">
+    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">🛠️ System Architecture Blueprint &nbsp;&nbsp;<code>DIAG_FLOW // COMPLETED</code></h2>
   </div>
 
   <p style="font-size: 14.5px; color: #b4b4c6; line-height: 1.6; font-family: 'Inter', sans-serif;">
@@ -330,10 +320,8 @@
 
 <!-- ================= SECTION 6: DETAILED INSTALLATION ================= -->
 <div style="background: #0c0d16; border: 2px solid #00F0FF; border-radius: 16px; padding: 25px; box-shadow: 0 8px 32px rgba(0, 240, 255, 0.15); margin: 30px 0;">
-  <div style="display: flex; align-items: center; margin-bottom: 20px; border-bottom: 2.5px solid #1a334d; padding-bottom: 12px;">
-    <span style="font-size: 24px; margin-right: 12px;">📥</span>
-    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">Detailed Installation &amp; Virtual Environments</h2>
-    <span style="margin-left: auto; color: #FF007F; font-family: monospace; font-size: 11px; font-weight: bold; letter-spacing: 1px;">PACK_SYS // READY</span>
+  <div style="border-bottom: 2.5px solid #1a334d; padding-bottom: 12px; margin-bottom: 20px;">
+    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">📥 Detailed Installation &amp; Environments &nbsp;&nbsp;<code>PACK_SYS // READY</code></h2>
   </div>
 
   <p style="font-size: 14px; color: #b4b4c6; line-height: 1.6; font-family: 'Inter';">
@@ -480,10 +468,8 @@ $ python app.py</code></pre>
 
 <!-- ================= SECTION 7: CALIBRATION & CONFIGURATION ================= -->
 <div style="background: #0c0d16; border: 2px solid #FF007F; border-radius: 16px; padding: 25px; box-shadow: 0 8px 32px rgba(255, 0, 127, 0.15); margin: 30px 0;">
-  <div style="display: flex; align-items: center; margin-bottom: 20px; border-bottom: 2.5px solid #3d1b4a; padding-bottom: 12px;">
-    <span style="font-size: 24px; margin-right: 12px;">⚙️</span>
-    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">Calibration &amp; Customization Settings</h2>
-    <span style="margin-left: auto; color: #00F0FF; font-family: monospace; font-size: 11px; font-weight: bold; letter-spacing: 1px;">HUD_CONFIG // READY</span>
+  <div style="border-bottom: 2.5px solid #3d1b4a; padding-bottom: 12px; margin-bottom: 20px;">
+    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">⚙️ Calibration &amp; Customization &nbsp;&nbsp;<code>HUD_CONFIG // READY</code></h2>
   </div>
 
   <p style="font-size: 14px; color: #b4b4c6; line-height: 1.6; font-family: 'Inter';">
@@ -527,10 +513,8 @@ self.hysteresis = 0.15        # Normalized hysteresis latch margin</code></pre>
 
 <!-- ================= SECTION 8: KNOWN LIMITATIONS ================= -->
 <div style="background: #0c0d16; border: 2px solid #00F0FF; border-radius: 16px; padding: 25px; box-shadow: 0 8px 32px rgba(0, 240, 255, 0.15); margin: 30px 0;">
-  <div style="display: flex; align-items: center; margin-bottom: 20px; border-bottom: 2.5px solid #1a334d; padding-bottom: 12px;">
-    <span style="font-size: 24px; margin-right: 12px;">⚠️</span>
-    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">Known Limitations</h2>
-    <span style="margin-left: auto; color: #FF007F; font-family: monospace; font-size: 11px; font-weight: bold; letter-spacing: 1px;">LIMITS_VER // OK</span>
+  <div style="border-bottom: 2.5px solid #1a334d; padding-bottom: 12px; margin-bottom: 20px;">
+    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">⚠️ Known Limitations &nbsp;&nbsp;<code>LIMITS_VER // OK</code></h2>
   </div>
 
   <ul style="margin: 10px 0 0 0; padding-left: 20px; font-size: 14px; color: #b4b4c6; line-height: 1.6; font-family: 'Inter';">
@@ -545,10 +529,8 @@ self.hysteresis = 0.15        # Normalized hysteresis latch margin</code></pre>
 
 <!-- ================= SECTION 9: TROUBLESHOOTING FAQ ================= -->
 <div style="background: #0c0d16; border: 2px solid #FF007F; border-radius: 16px; padding: 25px; box-shadow: 0 8px 32px rgba(255, 0, 127, 0.15); margin: 30px 0;">
-  <div style="display: flex; align-items: center; margin-bottom: 25px; border-bottom: 2.5px solid #3d1b4a; padding-bottom: 12px;">
-    <span style="font-size: 24px; margin-right: 12px;">💬</span>
-    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">Exhaustive Troubleshooting FAQ</h2>
-    <span style="margin-left: auto; color: #00F0FF; font-family: monospace; font-size: 11px; font-weight: bold; letter-spacing: 1px;">LOG_SYS // CHECKED</span>
+  <div style="border-bottom: 2.5px solid #3d1b4a; padding-bottom: 12px; margin-bottom: 25px;">
+    <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif; border: none;">💬 Exhaustive Troubleshooting FAQ &nbsp;&nbsp;<code>LOG_SYS // CHECKED</code></h2>
   </div>
 
   <!-- FAQ 1 -->
