@@ -95,10 +95,10 @@ class GestureEngine:
         self.smoothing_max = 0.80
         self.v_scale = 15.0
         
-        self.click_threshold = 0.032
-        self.scroll_threshold = 0.04
-        self.zoom_threshold = 0.06
-        self.hysteresis = 0.015
+        self.click_threshold = 0.30   # Normalized click distance trigger
+        self.scroll_threshold = 0.40  # Normalized scroll threshold
+        self.zoom_threshold = 0.60    # Normalized zoom threshold
+        self.hysteresis = 0.15        # Normalized hysteresis latch margin
         
         # Pointer speed/sensitivity
         self.pointer_sensitivity = 1.0
@@ -380,12 +380,16 @@ class GestureEngine:
                     screen_x = int(smoothed_x * self.screen_w)
                     screen_y = int(smoothed_y * self.screen_h)
 
-                    # Determine click limits using Schmitt Trigger (Hysteresis)
+                    # Determine click limits using Schmitt Trigger (Hysteresis) - Fully normalized by hand_scale!
                     click_limit = self.click_threshold + self.hysteresis if self.is_clicked else self.click_threshold
+
+                    # Normalize the finger pinch distances by hand_scale to make clicks 100% scale-independent
+                    norm_middle_thumb = middle_thumb_dist / hand_scale
+                    norm_index_thumb = index_thumb_dist / hand_scale
 
                     # --- GESTURE: RIGHT CLICK PINCH (Thumb & Middle Finger, only if not fully folded) ---
                     is_middle_folded = not middle_open
-                    if not is_middle_folded and middle_thumb_dist < click_limit:
+                    if not is_middle_folded and norm_middle_thumb < click_limit:
                         gesture_mode = "Right Clicking"
                         if not self.is_clicked:
                             click_right()
@@ -393,7 +397,7 @@ class GestureEngine:
                             time.sleep(0.1) # short debounce
                     
                     # --- GESTURE: LEFT CLICK / DRAG PINCH (Thumb & Index Finger) ---
-                    elif index_thumb_dist < click_limit:
+                    elif norm_index_thumb < click_limit:
                         current_time = time.time()
                         gesture_mode = "Left Clicking"
                         

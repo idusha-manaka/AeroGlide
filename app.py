@@ -82,16 +82,16 @@ class AeroGlideApp(ctk.CTk):
         # --- SLIDER: Click Distance ---
         self.click_frame = ctk.CTkFrame(self.left_panel, fg_color="transparent")
         self.click_frame.pack(fill="x", padx=25, pady=8)
-        self.click_lbl = ctk.CTkLabel(self.click_frame, text="Pinch Click Threshold: 0.032", font=ctk.CTkFont(size=12))
+        self.click_lbl = ctk.CTkLabel(self.click_frame, text="Pinch Click Threshold: 0.30", font=ctk.CTkFont(size=12))
         self.click_lbl.pack(anchor="w")
         self.click_slider = ctk.CTkSlider(
             self.click_frame, 
-            from_=0.015, 
-            to=0.08, 
+            from_=0.15, 
+            to=0.45, 
             number_of_steps=100,
             command=self.on_settings_change
         )
-        self.click_slider.set(0.032)
+        self.click_slider.set(0.30)
         self.click_slider.pack(fill="x", pady=4)
 
         # --- SLIDER: Pointer Speed / Sensitivity ---

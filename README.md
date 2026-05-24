@@ -56,27 +56,27 @@ Traditional virtual touchpads suffer from severe cursor drift, click latency, an
   </thead>
   <tbody>
     <tr style="border-bottom: 1px solid #201a30; background: transparent;">
-      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">⚡ **Input Execution Latency**</td>
+      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">⚡ <b>Input Execution Latency</b></td>
       <td align="center" style="padding: 14px; font-size: 14px; color: #ff3366; border: none;">🔴 High Lag (30ms - 50ms)</td>
       <td align="center" style="padding: 14px; font-size: 14px; color: #00F0FF; font-weight: 600; border: none;">🟢 Instant (Zero-Lag win32)</td>
     </tr>
     <tr style="border-bottom: 1px solid #201a30; background: transparent;">
-      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">🖥️ **DPI Scaling (125%/150%)**</td>
+      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">🖥️ <b>DPI Scaling (125%/150%)</b></td>
       <td align="center" style="padding: 14px; font-size: 14px; color: #ff3366; border: none;">❌ Stuck (fails on laptop screens)</td>
       <td align="center" style="padding: 14px; font-size: 14px; color: #00F0FF; font-weight: 600; border: none;">✅ 1:1 Pixel-Perfect DPI Aware</td>
     </tr>
     <tr style="border-bottom: 1px solid #201a30; background: transparent;">
-      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">📈 **Cursor Precision Damping**</td>
+      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">📈 <b>Cursor Precision Damping</b></td>
       <td align="center" style="padding: 14px; font-size: 14px; color: #ff3366; border: none;">❌ Unstable (high tremor jitter)</td>
       <td align="center" style="padding: 14px; font-size: 14px; color: #00F0FF; font-weight: 600; border: none;">✅ Adaptive Smoothing Filter</td>
     </tr>
     <tr style="border-bottom: 1px solid #201a30; background: transparent;">
-      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">📐 **Hand Tilt & Orientation**</td>
+      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">📐 <b>Hand Tilt & Orientation</b></td>
       <td align="center" style="padding: 14px; font-size: 14px; color: #ff3366; border: none;">❌ Fails (strict y-axis targets)</td>
       <td align="center" style="padding: 14px; font-size: 14px; color: #00F0FF; font-weight: 600; border: none;">✅ Rotation-Independent Ratios</td>
     </tr>
     <tr style="border-bottom: none; background: transparent;">
-      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">🛡️ **Accidental Auto-Clicks**</td>
+      <td style="padding: 14px; font-size: 14px; font-weight: 600; color: #e0e0e5; border: none;">🛡️ <b>Accidental Auto-Clicks</b></td>
       <td align="center" style="padding: 14px; font-size: 14px; color: #ff3366; border: none;">❌ Irritating micro-clicks</td>
       <td align="center" style="padding: 14px; font-size: 14px; color: #00F0FF; font-weight: 600; border: none;">✅ Schmitt Latch Latching</td>
     </tr>
