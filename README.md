@@ -1,6 +1,6 @@
 <!-- DYNAMIC GRADIENT ANIMATED WAVING HEADER -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=111520,00FF80&height=220&section=header&text=AeroGlide&fontSize=68&fontColor=ffffff&desc=🔮%20Virtual%20Gesture%20Touchpad%20for%20Windows&descColor=00FF80&descSize=20&descAlignY=62&animation=fadeIn" width="100%" alt="AeroGlide Animated Title">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=111520,1a2333&height=220&section=header&text=AeroGlide&fontSize=62&fontColor=00FF80&desc=Next-Gen%20Virtual%20Gesture%20Touchpad%20for%20Windows&descColor=ffffff&descSize=18&animation=fadeIn" width="100%" alt="AeroGlide Animated Title">
 </p>
 
 <!-- DYNAMIC TYPING SVG HEADER -->
@@ -434,20 +434,6 @@ While AeroGlide is highly optimized for performance, users should be aware of th
 * **👥 Background Hand Interference:** MediaPipe's tracking pipeline searches for the primary hand. If another person is sitting in the camera's field of view or if your other hand crosses the workspace, it may jump tracking. Keep a clear workspace.
 * **🖥️ Multi-Display Mapping:** By default, low-level ctypes user32 calls map the normalized coordinate space to the **Primary Monitor** bounds. If you run a dual-monitor setup, ensure the window you want to navigate is placed on your main display.
 * **🔋 Power Saving & CPU Throttling:** On Windows laptops running on "Best Power Efficiency" battery profiles, CPU throttling may drop OpenCV acquisition speeds. For butter-smooth cursor motion, plug your laptop in or select the "High Performance" power profile.
-
----
-
-## 📈 Stargazers Trends over Time
-
-Show your support for this futuristic gesture navigation touchpad! Star the repository to track our growing community graph below:
-
-<p align="center">
-  <a href="https://github.com/idusha-manaka/AeroGlide">
-    <img src="https://starchart.cc/idusha-manaka/AeroGlide.svg" alt="AeroGlide Stargazers Over Time Graph" width="100%" style="max-width: 680px; border-radius: 12px; border: 1px solid #2c2c35; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
-  </a>
-</p>
-
-<br>
 
 ---
 

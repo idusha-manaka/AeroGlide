@@ -30,6 +30,9 @@
         stroke-linejoin: round;
         fill: none;
       }
+      .accent-dot {
+        fill: #00FF80;
+      }
       .text-title {
         fill: #ffffff;
         font-family: 'Outfit', 'Segoe UI', -apple-system, sans-serif;
@@ -75,6 +78,9 @@
         .icon-stroke {
           stroke: #059669;
         }
+        .accent-dot {
+          fill: #059669;
+        }
         .text-title {
           fill: #0f172a;
         }
@@ -100,12 +106,20 @@
     <rect class="card" width="176" height="220" />
     <line class="accent-line" x1="16" y1="16" x2="45" y2="16" />
     
-    <!-- Vector Stylized Hand: Index Open -->
+    <!-- Geometric Hand: Index Extended -->
     <g transform="translate(68, 30)">
       <circle class="icon-bg" cx="20" cy="20" r="22" />
-      <!-- Stylized hand gesture: index finger up, others folded -->
-      <path class="icon-stroke" d="M12,32 C12,32 12,24 12,22 C12,20 14,20 14,22 L14,32 M16,32 L16,10 C16,8 19,8 19,10 L19,32 M21,32 L21,22 C21,20 23,20 23,22 L23,32 M25,32 L25,24 C25,22 27,22 27,24 L27,32 M28,32 C28,32 30,30 28,26 C26,22 21,22 21,22" />
-      <path class="icon-stroke" d="M10,32 C10,32 8,32 8,36 C8,40 18,40 22,40 C26,40 30,34 30,32" />
+      <g transform="translate(2, 2)">
+        <!-- Extended Index Finger -->
+        <rect class="icon-stroke" x="15" y="4" width="6" height="18" rx="3" />
+        <!-- Folded Fingers -->
+        <rect class="icon-stroke" x="21" y="12" width="6" height="10" rx="3" />
+        <rect class="icon-stroke" x="27" y="14" width="6" height="8" rx="3" />
+        <!-- Thumb -->
+        <path class="icon-stroke" d="M7,17 C7,13 13,13 15,16" />
+        <!-- Palm Base -->
+        <path class="icon-stroke" d="M10,22 L10,28 C10,31 28,31 28,28 L28,20" />
+      </g>
     </g>
 
     <!-- Tag -->
@@ -124,14 +138,21 @@
     <rect class="card" width="176" height="220" />
     <line class="accent-line" x1="16" y1="16" x2="45" y2="16" />
 
-    <!-- Vector Stylized Hand: Pinch -->
+    <!-- Geometric Hand: Pinch Latch -->
     <g transform="translate(68, 30)">
       <circle class="icon-bg" cx="20" cy="20" r="22" />
-      <!-- Stylized pinch: thumb and index touching -->
-      <path class="icon-stroke" d="M12,32 C12,32 10,24 14,20 C18,16 23,16 25,20 C27,24 23,26 21,24 M16,14 C18,12 21,12 23,15 M21,24 C21,24 24,23 26,25 C28,27 28,30 26,32 M25,28 C27,28 29,30 28,33" />
-      <!-- Pinch spark -->
-      <path class="icon-stroke" d="M18,17 L19,19" stroke-width="1.5"/>
-      <path class="icon-stroke" d="M22,17 L21,19" stroke-width="1.5"/>
+      <g transform="translate(2, 2)">
+        <!-- Index Finger curving down to pinch -->
+        <path class="icon-stroke" d="M11,18 C11,10 17,8 21,12" />
+        <!-- Thumb curving up to pinch -->
+        <path class="icon-stroke" d="M7,22 C7,18 13,14 21,12" />
+        <!-- Folded Fingers -->
+        <rect class="icon-stroke" x="20" y="15" width="6" height="11" rx="3" />
+        <rect class="icon-stroke" x="26" y="17" width="6" height="9" rx="3" />
+        <!-- Pinch Spark/Dot Indicator -->
+        <circle class="accent-dot" cx="21" cy="12" r="3.5" />
+        <circle class="icon-stroke" cx="21" cy="12" r="7" stroke-dasharray="2,2" />
+      </g>
     </g>
 
     <!-- Tag -->
@@ -150,11 +171,23 @@
     <rect class="card" width="176" height="220" />
     <line class="accent-line" x1="16" y1="16" x2="45" y2="16" />
 
-    <!-- Vector Stylized Hand: Two Fingers -->
+    <!-- Geometric Hand: Two Extended (Scroll) -->
     <g transform="translate(68, 30)">
       <circle class="icon-bg" cx="20" cy="20" r="22" />
-      <!-- Stylized scroll/2-fingers open -->
-      <path class="icon-stroke" d="M13,32 L13,10 C13,8 16,8 16,10 L16,32 M19,32 L19,10 C19,8 22,8 22,10 L22,32 M25,32 L25,24 C25,22 28,22 28,24 L28,32 M29,32 C29,32 31,30 29,26 M10,32 C10,32 8,34 8,37 C8,40 18,40 22,40 C26,40 30,34 30,32" />
+      <g transform="translate(-2, 2)">
+        <!-- Index Finger -->
+        <rect class="icon-stroke" x="13" y="4" width="6" height="18" rx="3" />
+        <!-- Middle Finger -->
+        <rect class="icon-stroke" x="19" y="4" width="6" height="18" rx="3" />
+        <!-- Folded Ring -->
+        <rect class="icon-stroke" x="25" y="12" width="6" height="10" rx="3" />
+        <!-- Thumb -->
+        <path class="icon-stroke" d="M5,17 C5,13 11,13 13,16" />
+        <!-- Palm Base -->
+        <path class="icon-stroke" d="M8,22 L8,28 C8,31 27,31 27,28 L27,22" />
+        <!-- Scroll Indicators (Arrows) -->
+        <path class="icon-stroke" d="M33,9 L33,21 M30,12 L33,9 L36,12 M30,18 L33,21 L36,18" stroke-width="1.5" />
+      </g>
     </g>
 
     <!-- Tag -->
@@ -173,11 +206,25 @@
     <rect class="card" width="176" height="220" />
     <line class="accent-line" x1="16" y1="16" x2="45" y2="16" />
 
-    <!-- Vector Stylized Hand: 5 Fingers Open -->
+    <!-- Geometric Hand: 5 Extended (Zoom) -->
     <g transform="translate(68, 30)">
       <circle class="icon-bg" cx="20" cy="20" r="22" />
-      <!-- Stylized 5 fingers open -->
-      <path class="icon-stroke" d="M10,24 C8,21 11,18 12,21 L14,29 M14,29 L14,8 C14,6 16,6 16,8 L16,28 M18,28 L18,5 C18,3 20,3 20,5 L20,28 M22,28 L22,7 C22,5 24,5 24,7 L24,28 M26,28 L26,11 C26,9 28,9 28,11 L28,28 M8,30 C8,30 11,35 18,37 C25,39 28,32 28,30" />
+      <g transform="translate(0, 2)">
+        <!-- Thumb -->
+        <path class="icon-stroke" d="M5,18 C5,14 11,12 13,16" />
+        <!-- Index -->
+        <rect class="icon-stroke" x="11" y="6" width="5" height="16" rx="2.5" />
+        <!-- Middle -->
+        <rect class="icon-stroke" x="16" y="4" width="5" height="18" rx="2.5" />
+        <!-- Ring -->
+        <rect class="icon-stroke" x="21" y="6" width="5" height="16" rx="2.5" />
+        <!-- Pinky -->
+        <rect class="icon-stroke" x="26" y="10" width="5" height="12" rx="2.5" />
+        <!-- Palm Base -->
+        <path class="icon-stroke" d="M9,22 C9,26 13,28 19,28 C25,28 29,26 29,22" />
+        <!-- Zoom Diagonal Outward Brackets -->
+        <path class="icon-stroke" d="M4,6 L8,6 M4,6 L4,10 M32,6 L28,6 M32,6 L32,10" stroke-width="1.5" />
+      </g>
     </g>
 
     <!-- Tag -->
@@ -196,14 +243,26 @@
     <rect class="card" width="176" height="220" />
     <line class="accent-line" x1="16" y1="16" x2="45" y2="16" />
 
-    <!-- Vector Stylized Hand: Volume / Dial -->
+    <!-- Geometric Hand: 3 Extended (Volume) -->
     <g transform="translate(68, 30)">
       <circle class="icon-bg" cx="20" cy="20" r="22" />
-      <!-- Stylized 3 fingers open (thumb, index, middle) -->
-      <path class="icon-stroke" d="M10,23 C9,21 11,19 12,21 L14,30 M14,30 L14,7 C14,5 16,5 16,7 L16,30 M18,30 L18,5 C18,3 20,3 20,5 L20,30 M22,30 L22,23 C22,21 24,21 24,23 L24,30 M26,30 L26,24 C26,22 28,22 28,24 L28,30" />
-      <!-- Vol waves -->
-      <path class="icon-stroke" d="M26,10 C28,12 28,16 26,18" stroke-width="1.5"/>
-      <path class="icon-stroke" d="M29,7 C33,11 33,17 29,21" stroke-width="1.5"/>
+      <g transform="translate(-1, 2)">
+        <!-- Thumb -->
+        <path class="icon-stroke" d="M5,18 C5,14 11,12 13,16" />
+        <!-- Index -->
+        <rect class="icon-stroke" x="11" y="6" width="5" height="16" rx="2.5" />
+        <!-- Middle -->
+        <rect class="icon-stroke" x="16" y="4" width="5" height="18" rx="2.5" />
+        <!-- Folded Ring -->
+        <rect class="icon-stroke" x="21" y="12" width="5" height="10" rx="2.5" />
+        <!-- Folded Pinky -->
+        <rect class="icon-stroke" x="26" y="14" width="5" height="8" rx="2.5" />
+        <!-- Palm Base -->
+        <path class="icon-stroke" d="M9,22 C9,26 13,28 19,28 C25,28 29,26 29,22" />
+        <!-- Audio Waves -->
+        <path class="icon-stroke" d="M31,12 C33,14 33,18 31,20" stroke-width="1.5" />
+        <path class="icon-stroke" d="M34,9 C37,12 37,20 34,23" stroke-width="1.5" stroke-dasharray="2,2" />
+      </g>
     </g>
 
     <!-- Tag -->
