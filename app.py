@@ -8,7 +8,7 @@ from gesture_engine import GestureEngine
 
 # Set gorgeous dark theme style
 ctk.set_appearance_mode("dark")
-ctk.set_default_color_theme("green")  # Futuristic neon green accent
+ctk.set_default_color_theme("dark-blue")  # High-end base dark palette
 
 class AeroGlideApp(ctk.CTk):
     def __init__(self):
@@ -18,6 +18,7 @@ class AeroGlideApp(ctk.CTk):
         self.title("AeroGlide Virtual Touchpad")
         self.geometry("760x570")
         self.resizable(False, False)
+        self.configure(fg_color="#0d0b18")  # Deep cosmic space violet background
 
         # Threading & Control states
         self.is_touchpad_running = False
@@ -38,28 +39,51 @@ class AeroGlideApp(ctk.CTk):
         self.grid_columnconfigure(1, weight=2) # Diagnostics
 
         # ================= LEFT SIDE PANEL: CONTROLS & SETTINGS =================
-        self.left_panel = ctk.CTkFrame(self, corner_radius=15, fg_color="#1E1E24")
+        self.left_panel = ctk.CTkFrame(
+            self, 
+            corner_radius=15, 
+            fg_color="#141124",
+            border_width=2,
+            border_color="#00F0FF"  # Glowing Neon Cyber Cyan border
+        )
         self.left_panel.grid(row=0, column=0, padx=15, pady=15, sticky="nsew")
         
         self.title_lbl = ctk.CTkLabel(
             self.left_panel, 
-            text="AeroGlide Control Panel", 
-            font=ctk.CTkFont(size=22, weight="bold"),
-            text_color="#00FF80"
+            text="AEROGLIDE CONTROL PANEL", 
+            font=ctk.CTkFont(family="Consolas", size=20, weight="bold"),
+            text_color="#00F0FF"
         )
-        self.title_lbl.pack(pady=(20, 15))
+        self.title_lbl.pack(pady=(20, 5))
+
+        self.title_sub = ctk.CTkLabel(
+            self.left_panel,
+            text="─── SYSTEM INTERFACE: ACTIVE ───",
+            font=ctk.CTkFont(family="Consolas", size=10, weight="bold"),
+            text_color="#FF007F"
+        )
+        self.title_sub.pack(pady=(0, 15))
 
         # --- SLIDER: Smoothing Min (Precision) ---
         self.smooth_min_frame = ctk.CTkFrame(self.left_panel, fg_color="transparent")
         self.smooth_min_frame.pack(fill="x", padx=25, pady=8)
-        self.smooth_min_lbl = ctk.CTkLabel(self.smooth_min_frame, text="Fine Precision Smoothing: 0.12", font=ctk.CTkFont(size=12))
+        self.smooth_min_lbl = ctk.CTkLabel(
+            self.smooth_min_frame, 
+            text="Fine Precision Smoothing: 0.12", 
+            font=ctk.CTkFont(family="Consolas", size=11, weight="bold"),
+            text_color="#00F0FF"
+        )
         self.smooth_min_lbl.pack(anchor="w")
         self.smooth_min_slider = ctk.CTkSlider(
             self.smooth_min_frame, 
             from_=0.02, 
             to=0.35, 
             number_of_steps=100,
-            command=self.on_settings_change
+            command=self.on_settings_change,
+            fg_color="#1F1A3A",
+            progress_color="#00F0FF",
+            button_color="#FF007F",
+            button_hover_color="#FF3399"
         )
         self.smooth_min_slider.set(0.12)
         self.smooth_min_slider.pack(fill="x", pady=4)
@@ -67,14 +91,23 @@ class AeroGlideApp(ctk.CTk):
         # --- SLIDER: Smoothing Max (Velocity) ---
         self.smooth_max_frame = ctk.CTkFrame(self.left_panel, fg_color="transparent")
         self.smooth_max_frame.pack(fill="x", padx=25, pady=8)
-        self.smooth_max_lbl = ctk.CTkLabel(self.smooth_max_frame, text="Fast Motion Responsiveness: 0.80", font=ctk.CTkFont(size=12))
+        self.smooth_max_lbl = ctk.CTkLabel(
+            self.smooth_max_frame, 
+            text="Fast Motion Responsiveness: 0.80", 
+            font=ctk.CTkFont(family="Consolas", size=11, weight="bold"),
+            text_color="#00F0FF"
+        )
         self.smooth_max_lbl.pack(anchor="w")
         self.smooth_max_slider = ctk.CTkSlider(
             self.smooth_max_frame, 
             from_=0.40, 
             to=0.98, 
             number_of_steps=100,
-            command=self.on_settings_change
+            command=self.on_settings_change,
+            fg_color="#1F1A3A",
+            progress_color="#00F0FF",
+            button_color="#FF007F",
+            button_hover_color="#FF3399"
         )
         self.smooth_max_slider.set(0.80)
         self.smooth_max_slider.pack(fill="x", pady=4)
@@ -82,14 +115,23 @@ class AeroGlideApp(ctk.CTk):
         # --- SLIDER: Click Distance ---
         self.click_frame = ctk.CTkFrame(self.left_panel, fg_color="transparent")
         self.click_frame.pack(fill="x", padx=25, pady=8)
-        self.click_lbl = ctk.CTkLabel(self.click_frame, text="Pinch Click Threshold: 0.30", font=ctk.CTkFont(size=12))
+        self.click_lbl = ctk.CTkLabel(
+            self.click_frame, 
+            text="Pinch Click Threshold: 0.30", 
+            font=ctk.CTkFont(family="Consolas", size=11, weight="bold"),
+            text_color="#00F0FF"
+        )
         self.click_lbl.pack(anchor="w")
         self.click_slider = ctk.CTkSlider(
             self.click_frame, 
             from_=0.15, 
             to=0.45, 
             number_of_steps=100,
-            command=self.on_settings_change
+            command=self.on_settings_change,
+            fg_color="#1F1A3A",
+            progress_color="#00F0FF",
+            button_color="#FF007F",
+            button_hover_color="#FF3399"
         )
         self.click_slider.set(0.30)
         self.click_slider.pack(fill="x", pady=4)
@@ -97,14 +139,23 @@ class AeroGlideApp(ctk.CTk):
         # --- SLIDER: Pointer Speed / Sensitivity ---
         self.sens_frame = ctk.CTkFrame(self.left_panel, fg_color="transparent")
         self.sens_frame.pack(fill="x", padx=25, pady=8)
-        self.sens_lbl = ctk.CTkLabel(self.sens_frame, text="Cursor Speed / Sensitivity: 1.00x", font=ctk.CTkFont(size=12))
+        self.sens_lbl = ctk.CTkLabel(
+            self.sens_frame, 
+            text="Cursor Speed / Sensitivity: 1.00x", 
+            font=ctk.CTkFont(family="Consolas", size=11, weight="bold"),
+            text_color="#00F0FF"
+        )
         self.sens_lbl.pack(anchor="w")
         self.sens_slider = ctk.CTkSlider(
             self.sens_frame, 
             from_=0.5, 
             to=2.0, 
             number_of_steps=150,
-            command=self.on_settings_change
+            command=self.on_settings_change,
+            fg_color="#1F1A3A",
+            progress_color="#00F0FF",
+            button_color="#FF007F",
+            button_hover_color="#FF3399"
         )
         self.sens_slider.set(1.0)
         self.sens_slider.pack(fill="x", pady=4)
@@ -116,7 +167,13 @@ class AeroGlideApp(ctk.CTk):
         self.enable_zoom_sw = ctk.CTkSwitch(
             self.toggles_frame, 
             text="Enable Zoom In/Out Gesture", 
-            command=self.on_settings_change
+            command=self.on_settings_change,
+            font=ctk.CTkFont(family="Consolas", size=11),
+            text_color="#E0E0E0",
+            fg_color="#1F1A3A",
+            progress_color="#00F0FF",
+            button_color="#FF007F",
+            button_hover_color="#FF3399"
         )
         self.enable_zoom_sw.select()
         self.enable_zoom_sw.pack(anchor="w", pady=5)
@@ -124,7 +181,13 @@ class AeroGlideApp(ctk.CTk):
         self.enable_vol_sw = ctk.CTkSwitch(
             self.toggles_frame, 
             text="Enable System Volume Gesture", 
-            command=self.on_settings_change
+            command=self.on_settings_change,
+            font=ctk.CTkFont(family="Consolas", size=11),
+            text_color="#E0E0E0",
+            fg_color="#1F1A3A",
+            progress_color="#00F0FF",
+            button_color="#FF007F",
+            button_hover_color="#FF3399"
         )
         self.enable_vol_sw.select()
         self.enable_vol_sw.pack(anchor="w", pady=5)
@@ -132,63 +195,127 @@ class AeroGlideApp(ctk.CTk):
         self.enable_drag_sw = ctk.CTkSwitch(
             self.toggles_frame, 
             text="Enable Pinch-to-Drag Gesture", 
-            command=self.on_settings_change
+            command=self.on_settings_change,
+            font=ctk.CTkFont(family="Consolas", size=11),
+            text_color="#E0E0E0",
+            fg_color="#1F1A3A",
+            progress_color="#00F0FF",
+            button_color="#FF007F",
+            button_hover_color="#FF3399"
         )
         self.enable_drag_sw.select()
         self.enable_drag_sw.pack(anchor="w", pady=5)
 
 
         # ================= RIGHT SIDE PANEL: DIAGNOSTICS =================
-        self.right_panel = ctk.CTkFrame(self, corner_radius=15, fg_color="#141416")
+        self.right_panel = ctk.CTkFrame(
+            self, 
+            corner_radius=15, 
+            fg_color="#181124",
+            border_width=2,
+            border_color="#FF007F"  # Glowing Neon Cyber Pink border
+        )
         self.right_panel.grid(row=0, column=1, padx=15, pady=15, sticky="nsew")
         
         self.diag_lbl = ctk.CTkLabel(
             self.right_panel, 
-            text="Live Diagnostics", 
-            font=ctk.CTkFont(size=18, weight="bold"),
-            text_color="#B0B0B5"
+            text="LIVE DIAGNOSTICS", 
+            font=ctk.CTkFont(family="Consolas", size=18, weight="bold"),
+            text_color="#FF007F"
         )
-        self.diag_lbl.pack(pady=(20, 15))
+        self.diag_lbl.pack(pady=(20, 5))
 
-        # LED status circle (canvas indicator)
-        self.led_canvas = tk.Canvas(self.right_panel, width=50, height=50, bg="#141416", highlightthickness=0)
+        self.diag_sub = ctk.CTkLabel(
+            self.right_panel,
+            text="─── CORE TELEMETRY ───",
+            font=ctk.CTkFont(family="Consolas", size=10, weight="bold"),
+            text_color="#00F0FF"
+        )
+        self.diag_sub.pack(pady=(0, 10))
+
+        # LED status circle (canvas indicator styled as Cybernetic Target Lock-on)
+        self.led_canvas = tk.Canvas(self.right_panel, width=100, height=100, bg="#181124", highlightthickness=0)
         self.led_canvas.pack(pady=10)
-        self.led_circle = self.led_canvas.create_oval(5, 5, 45, 45, fill="#505055")
+        
+        # Cybernetic aiming frame decor
+        self.led_canvas.create_oval(10, 10, 90, 90, outline="#FF007F", width=2)
+        self.led_canvas.create_oval(20, 20, 80, 80, outline="#00F0FF", width=1, dash=(4, 2))
+        self.led_canvas.create_line(5, 50, 25, 50, fill="#00F0FF", width=2)
+        self.led_canvas.create_line(75, 50, 95, 50, fill="#00F0FF", width=2)
+        self.led_canvas.create_line(50, 5, 50, 25, fill="#00F0FF", width=2)
+        self.led_canvas.create_line(50, 75, 50, 95, fill="#00F0FF", width=2)
+        
+        self.led_circle = self.led_canvas.create_oval(35, 35, 65, 65, fill="#FF007F", outline="#00F0FF", width=1)
 
         self.status_lbl = ctk.CTkLabel(
             self.right_panel, 
             text="SYSTEM OFFLINE", 
-            font=ctk.CTkFont(size=14, weight="bold"),
-            text_color="#808085"
+            font=ctk.CTkFont(family="Consolas", size=14, weight="bold"),
+            text_color="#FF007F"
         )
         self.status_lbl.pack(pady=5)
 
         # Mode Box HUD
-        self.mode_frame = ctk.CTkFrame(self.right_panel, corner_radius=10, fg_color="#1E1E24")
+        self.mode_frame = ctk.CTkFrame(
+            self.right_panel, 
+            corner_radius=10, 
+            fg_color="#141124",
+            border_width=1,
+            border_color="#00F0FF"
+        )
         self.mode_frame.pack(fill="x", padx=20, pady=15)
         
-        self.mode_title = ctk.CTkLabel(self.mode_frame, text="Current Gesture State", font=ctk.CTkFont(size=11), text_color="#A0A0A5")
+        self.mode_title = ctk.CTkLabel(
+            self.mode_frame, 
+            text="[ CURRENT GESTURE STATE ]", 
+            font=ctk.CTkFont(family="Consolas", size=10, weight="bold"), 
+            text_color="#00F0FF"
+        )
         self.mode_title.pack(pady=(8, 2))
-        self.mode_value = ctk.CTkLabel(self.mode_frame, text="Inactive", font=ctk.CTkFont(size=16, weight="bold"), text_color="#FF4040")
+        self.mode_value = ctk.CTkLabel(
+            self.mode_frame, 
+            text="INACTIVE", 
+            font=ctk.CTkFont(family="Consolas", size=16, weight="bold"), 
+            text_color="#FF007F"
+        )
         self.mode_value.pack(pady=(0, 8))
 
         # Camera preview switch
-        self.show_cam_sw = ctk.CTkSwitch(self.right_panel, text="Show HUD Camera Feed")
+        self.show_cam_sw = ctk.CTkSwitch(
+            self.right_panel, 
+            text="Show HUD Camera Feed",
+            font=ctk.CTkFont(family="Consolas", size=11),
+            text_color="#E0E0E0",
+            fg_color="#1F1A3A",
+            progress_color="#00F0FF",
+            button_color="#FF007F",
+            button_hover_color="#FF3399"
+        )
         self.show_cam_sw.select()
         self.show_cam_sw.pack(pady=10)
 
         # FPS HUD
-        self.fps_lbl = ctk.CTkLabel(self.right_panel, text="Framerate: 0 FPS", font=ctk.CTkFont(size=12))
+        self.fps_lbl = ctk.CTkLabel(
+            self.right_panel, 
+            text="TELEMETRY: 0 FPS", 
+            font=ctk.CTkFont(family="Consolas", size=11, weight="bold"),
+            text_color="#00F0FF"
+        )
         self.fps_lbl.pack(side="bottom", pady=20)
 
 
         # ================= BOTTOM PANEL: MAIN TRIGGER BUTTON =================
         self.start_btn = ctk.CTkButton(
             self.left_panel, 
-            text="INITIALIZE TOUCHPAD", 
-            font=ctk.CTkFont(size=15, weight="bold"),
+            text="[ INITIALIZE CORE TOUCHPAD ]", 
+            font=ctk.CTkFont(family="Consolas", size=14, weight="bold"),
             height=45,
-            command=self.toggle_touchpad
+            command=self.toggle_touchpad,
+            fg_color="#141124",
+            border_width=2,
+            border_color="#FF007F",
+            text_color="#FF007F",
+            hover_color="#2D1B3E"
         )
         self.start_btn.pack(side="bottom", fill="x", padx=25, pady=20)
 
@@ -199,7 +326,13 @@ class AeroGlideApp(ctk.CTk):
         if not self.is_touchpad_running:
             # Start
             self.is_touchpad_running = True
-            self.start_btn.configure(text="TERMINATE TOUCHPAD", fg_color="#C0392B", hover_color="#922B21")
+            self.start_btn.configure(
+                text="[ TERMINATE NEURAL LINK ]", 
+                fg_color="#FF007F", 
+                border_color="#00F0FF", 
+                text_color="#FFFFFF", 
+                hover_color="#CC0066"
+            )
             self.status_lbl.configure(text="SYSTEM ACTIVE", text_color="#00FF80")
             self.led_canvas.itemconfig(self.led_circle, fill="#00FF80")
             
@@ -210,10 +343,16 @@ class AeroGlideApp(ctk.CTk):
         else:
             # Stop
             self.is_touchpad_running = False
-            self.start_btn.configure(text="INITIALIZE TOUCHPAD", fg_color=["#2CC990", "#27AE60"], hover_color=["#27AE60", "#219653"])
-            self.status_lbl.configure(text="SYSTEM OFFLINE", text_color="#808085")
-            self.led_canvas.itemconfig(self.led_circle, fill="#505055")
-            self.mode_value.configure(text="Inactive", text_color="#FF4040")
+            self.start_btn.configure(
+                text="[ INITIALIZE CORE TOUCHPAD ]", 
+                fg_color="#141124",
+                border_color="#FF007F",
+                text_color="#FF007F",
+                hover_color="#2D1B3E"
+            )
+            self.status_lbl.configure(text="SYSTEM OFFLINE", text_color="#FF007F")
+            self.led_canvas.itemconfig(self.led_circle, fill="#FF007F")
+            self.mode_value.configure(text="INACTIVE", text_color="#FF007F")
 
     def run_touchpad_loop(self):
         """Threaded main processing loop for tracking and frame grabbing."""
