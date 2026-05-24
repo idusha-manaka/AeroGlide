@@ -1,139 +1,168 @@
-# ✈️ AeroGlide Virtual Touchpad
+<p align="center">
+  <img src="assets/banner.png" alt="AeroGlide Banner" width="100%" style="border-radius: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.5);">
+</p>
+
+<h1 align="center" style="font-size: 32px; font-weight: 800; border-bottom: none; margin-bottom: 0;">✈️ AeroGlide Virtual Touchpad</h1>
+<p align="center" style="font-size: 16px; color: #8a8a93; margin-top: 5px;">Transform your hand gestures into responsive, zero-latency desktop navigation.</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.12%2B-blue?style=for-the-badge&logo=python&logoColor=yellow" alt="Python Version">
-  <img src="https://img.shields.io/badge/OpenCV-4.x-green?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV Version">
-  <img src="https://img.shields.io/badge/MediaPipe-0.10.x-orange?style=for-the-badge&logo=google&logoColor=white" alt="MediaPipe">
+  <img src="https://img.shields.io/badge/Python-3.12%2B-3776AB?style=for-the-badge&logo=python&logoColor=yellow" alt="Python">
+  <img src="https://img.shields.io/badge/OpenCV-4.x-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV">
+  <img src="https://img.shields.io/badge/MediaPipe-0.10.14-00C7B7?style=for-the-badge&logo=google-cloud&logoColor=white" alt="MediaPipe">
   <img src="https://img.shields.io/badge/OS-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Support">
-  <img src="https://img.shields.io/badge/License-MIT-red?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/Status-Ultra--Smooth-00FF80?style=for-the-badge" alt="Smoothness Status">
 </p>
 
 ---
 
-## 🌟 Introduction
+## ⚡ Core Engine Highlights
 
-**AeroGlide** is a state-of-the-art, high-performance, and ultra-smooth gesture-controlled virtual touchpad. It translates webcam-captured hand movements and shapes into precise, zero-latency desktop navigation. By combining multi-threaded frame capture, advanced mathematical noise filtering, dynamic cursor acceleration, and low-level Windows OS kernel input acceleration, AeroGlide achieves a premium, butter-smooth desktop control experience.
+AeroGlide is a state-of-the-art virtual touchpad that turns real-time camera coordinates into fluid, organic mouse movements. By bypassing standard automation latency and using low-level Win32 inputs, AeroGlide delivers a zero-lag desktop control experience.
 
-Designed specifically for Windows laptops and high-DPI displays, AeroGlide completely bypasses the limitations of standard mouse-automation libraries to deliver 1:1 pixel-perfect tracking and a gorgeous, futuristic neon CustomTkinter dark-mode calibration panel.
+<br>
+
+<table width="100%" style="border-collapse: collapse; border: none; background: transparent;">
+  <tr style="border: none; background: transparent;">
+    <td width="50%" style="padding: 10px; border: none;">
+      <div style="background: #1E1E24; padding: 20px; border-radius: 12px; border: 1px solid #2C2C35; height: 160px;">
+        <h3 style="margin-top: 0; color: #00FF80; font-size: 16px;">⚡ win32 Kernel Input Acceleration</h3>
+        <p style="font-size: 13px; color: #b0b0b5; margin-bottom: 0; line-height: 1.5;">Bypasses heavy high-level libraries. Calls Windows User32 APIs (<code>SetCursorPos</code> and <code>mouse_event</code>) directly via Python ctypes, delivering instant, hardware-level cursor responses.</p>
+      </div>
+    </td>
+    <td width="50%" style="padding: 10px; border: none;">
+      <div style="background: #1E1E24; padding: 20px; border-radius: 12px; border: 1px solid #2C2C35; height: 160px;">
+        <h3 style="margin-top: 0; color: #00DFFF; font-size: 16px;">📐 Orientation-Independent Gestures</h3>
+        <p style="font-size: 13px; color: #b0b0b5; margin-bottom: 0; line-height: 1.5;">Uses dynamic palm-scaling ratios $D = \text{dist}(\text{Tip}, \text{Wrist}) / H$. Finger folds are calculated proportionally, making gestures 100% immune to hand tilt, rotation, or orientation.</p>
+      </div>
+    </td>
+  </tr>
+  <tr style="border: none; background: transparent;">
+    <td width="50%" style="padding: 10px; border: none;">
+      <div style="background: #1E1E24; padding: 20px; border-radius: 12px; border: 1px solid #2C2C35; height: 160px;">
+        <h3 style="margin-top: 0; color: #FFFF00; font-size: 16px;">📈 Adaptive Double Smoothing</h3>
+        <p style="font-size: 13px; color: #b0b0b5; margin-bottom: 0; line-height: 1.5;">An intelligent filter that scales smoothing dynamically. Slow movements get high damping to remove hand tremors (pixel-perfect precision); fast movements get high speed to avoid dragging latency.</p>
+      </div>
+    </td>
+    <td width="50%" style="padding: 10px; border: none;">
+      <div style="background: #1E1E24; padding: 20px; border-radius: 12px; border: 1px solid #2C2C35; height: 160px;">
+        <h3 style="margin-top: 0; color: #FF4040; font-size: 16px;">🛡️ Schmitt Trigger Click Latch</h3>
+        <p style="font-size: 13px; color: #b0b0b5; margin-bottom: 0; line-height: 1.5;">Features a magnetic hysteresis latch. Clicks trigger at <code>0.032</code> units and only release when opened beyond <code>0.047</code>. This completely eliminates micro-clicks during pointer navigation.</p>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<br>
 
 ---
 
-## 🚀 Key Technical Breakthroughs
+## 🎨 Interactive Gesture Dashboard
 
-### 1. Low-Level Windows OS Input Acceleration (`ctypes`)
-Instead of standard high-level libraries (like PyAutoGUI) which suffer from severe input lag and Windows User Account Control (UAC) permission blocks, AeroGlide calls the kernel-level Windows User32 API directly via Python's standard `ctypes` library. Clicks, mouse motion, and scrolls are injected directly into the Windows OS input stream, achieving **instant, zero-latency feedback**.
+AeroGlide maps natural hand shapes into high-fidelity desktop actions:
 
-### 2. High-DPI Resolution Awareness
-High-resolution screens and laptops with display scaling (e.g., 125% or 150%) often cause virtual mouse coordinates to map incorrectly, leaving the cursor stuck in a portion of the screen. AeroGlide registers the process as **fully DPI-aware** (`SetProcessDPIAware()`), guaranteeing 1:1 absolute physical pixel mapping across all resolutions (FHD, 2K, 4K).
+```
+         ☝️                🤌                ✊                👌
+   CURSOR NAVIGATION    LEFT CLICK        DRAG & DROP      VOLUME CONTROL
+```
 
-### 3. Proportional & Orientation-Independent Gesture Engine
-Legacy gesture engines rely on simple y-coordinate comparisons which immediately break if your hand tilts, rotates, or if you face the back of your hand to the camera. AeroGlide utilizes **Proportional Euclidean Distance Ratios**:
-* It dynamically measures the physical palm size $H = \text{distance}(\text{WRIST}, \text{MIDDLE\_FINGER\_MCP})$ as a scaling baseline.
-* Fingers are identified as open or folded based on their ratio of distance to the wrist relative to $H$, making the tracking **completely immune to hand tilt, rotation, or orientation**.
-
-### 4. Schmitt Trigger Click Hysteresis Latch
-To eliminate jittery clicking or accidental clicks during normal cursor navigation, AeroGlide implements a **Schmitt Trigger (Hysteresis)** click latch:
-* **To Click:** Index and Thumb distance must drop below a tight threshold (e.g., `0.032` normalized units).
-* **To Release:** Once clicked, the click remains locked in place until you intentionally open your fingers beyond `0.047` units.
-This creates a robust, "magnetic" click feeling, completely eliminating micro-clicks and ensuring that drag-and-drop actions feel extremely stable.
-
-### 5. Multi-Threaded Camera Pipeline
-Webcam frame grabbing (`cv2.VideoCapture.read()`) is a blocking operation that adds 30-50ms of frame latency. AeroGlide spawns a dedicated, lock-free background `VideoStream` thread that continuously grabs frames, leaving the main thread 100% free to focus on real-time MediaPipe model inference and GUI updates.
+| Mode | Gesture Type | Hand Shape | Action Triggered |
+| :--- | :--- | :--- | :--- |
+| **Cursor Control** | ☝️ **Navigation** | Index extended; other fingers folded | Butter-smooth, jitter-free cursor tracking |
+| **Left Click** | 🤌 **Pinch Action** | Pinch Index & Thumb tips together | Instant Left Click (debounced) |
+| **Drag & Drop** | ✊ **Hold Pinch** | Pinch Index & Thumb and hold for >0.4s | Left Mouse Down (hold & drag; release to drop) |
+| **Double Click** | 🤌🤌 **Double Tap** | Pinch Index & Thumb twice rapidly | Double Click action (within 0.35s) |
+| **Right Click** | ✌️ **Middle Pinch**| Pinch Middle & Thumb (Index open) | Right Mouse Click (ignores folded middle) |
+| **Web Scroll** | ✌️ **Two-finger Drag**| Index & Middle open close together | Butter-smooth Vertical / Horizontal page scroll |
+| **Zoom In/Out** | 🖐️ **Open hand span**| Keep 5 fingers open, scale Thumb-Index | Zoom In (spread apart) / Zoom Out (pinch close) |
+| **Volume Control** | 👌 **Volume Dial** | Thumb, Index, Middle open (Ring/Pinky closed) | System Volume UP (raise hand) / Volume DOWN |
 
 ---
 
-## 🛠️ System Architecture
+## 🛠️ System Architecture Diagram
 
 ```mermaid
 graph TD
-    A[Webcam Feed] -->|Multi-Threaded Capture| B(VideoStream Thread)
-    B -->|Lock-Free Frame Buffering| C(Main Process Loop)
-    C -->|MediaPipe Hands Inference| D{Hand Detected?}
-    D -->|No| E[System Idle State]
-    D -->|Yes| F[Calculate Palm Scale Factor H]
-    F -->|Normalize Coordinates| G(Proportional Distance Engine)
-    G -->|Classify Gesture| H{Gesture State}
+    A[Webcam Video Capture] -->|Multi-Threaded Reading| B(VideoStream Thread)
+    B -->|Lock-Free Frame Queue| C(Main Gesture Process Loop)
+    C -->|MediaPipe 0.10.14 Inference| D{Hand Tracked?}
+    D -->|No| E[System State: Idle]
+    D -->|Yes| F[Measure Palm Scale Factor H]
+    F -->|Normalize Coordinates| G(Proportional Distance Calculator)
+    G -->|Analyze Finger States| H{Gesture Classifier State}
     
-    H -->|Index Open / Middle Closed| I[Cursor Moving Mode]
-    I -->|Adaptive Double Exponential Smoothing| J[DPI-Aware win32 SetCursorPos]
+    H -->|Index Open / Middle Closed| I[Cursor Motion Mode]
+    I -->|Adaptive Double Exponential Filter| J[DPI-Aware win32 SetCursorPos]
     
     H -->|All Fingers Open| K[Zoom Mode]
-    K -->|Index-Thumb Expansion/Pinch| L[win32 Ctrl + Mouse Wheel]
+    K -->|Thumb-Index Distance Delta| L[win32 Ctrl + Mouse Scroll]
     
     H -->|Index + Middle Open| M[Scroll Mode]
-    M -->|Two-finger Drag| N[win32 mouse_event WHEEL]
+    M -->|Two-finger Motion Vector| N[win32 mouse_event Scroll]
     
-    H -->|Index + Middle + Thumb Open| O[System Volume Mode]
-    O -->|Height delta| P[win32 volumeup / volumedown]
+    H -->|Index + Middle + Thumb Open| O[Volume Dial Mode]
+    O -->|Vertical height delta| P[win32 system volume control]
     
-    J & L & N & P --> Q[Real-time CustomTkinter GUI HUD]
+    J & L & N & P --> Q[Real-time CustomTkinter GUI HUD Panel]
 ```
 
 ---
 
-## 🎮 Interactive Gesture Reference
+## 📦 Repository Structure
 
-| Mode | Gesture Representation | Trigger Action | OS Function |
-| :--- | :--- | :--- | :--- |
-| **Cursor Motion** | ☝️ Single index finger extended | Move hand within green box | Smooth cursor positioning |
-| **Left Click** | 🤌 Index and Thumb pinch | Quick pinch and release (<0.4s) | Normal Left Mouse Click |
-| **Drag & Drop** | ✊ Keep Index and Thumb pinched | Pinch and hold for >0.4s | Left Mouse Down (release to drop) |
-| **Double Click** | 🤌🤌 Rapid double index pinch | Double pinch within 0.35s | Left Mouse Double Click |
-| **Right Click** | ✌️ Middle and Thumb pinch | Pinch middle and thumb (index open) | Right Mouse Click |
-| **Vertical Scroll**| ✌️ Index & Middle together | Move hand up/down | Butter-smooth page scroll |
-| **Horizontal Scroll**| ✌️ Index & Middle together | Move hand left/right | Horizontal page scroll |
-| **Zoom In / Out** | 🖐️ Open Hand (all fingers open) | Spread Index & Thumb / Pinch them close | Zoom In (Ctrl+Scroll Up) / Zoom Out |
-| **Volume Control** | 👌 Thumb, Index, Middle open | Move hand up / down | Volume UP / Volume DOWN |
+* [app.py](file:///c:/Users/ASUS/Downloads/touch%20pad/app.py): The entry point. A gorgeous CustomTkinter dark-mode control center featuring active-zone visualization, live state feedback, and slider diagnostics.
+* [gesture_engine.py](file:///c:/Users/ASUS/Downloads/touch%20pad/gesture_engine.py): The core logic. Manages hand coordinate normalizations, DPI-awareness, proportional gesture states, and Win32 low-level hardware input simulations.
+* [smooth.py](file:///c:/Users/ASUS/Downloads/touch%20pad/smooth.py): Damps high-frequency hand tremors using our custom mathematical **Adaptive Exponential Smoother**.
+* [video_stream.py](file:///c:/Users/ASUS/Downloads/touch%20pad/video_stream.py): Runs camera acquisition in a separate thread to prevent webcam frame read blocks, maximizing tracking FPS.
 
 ---
 
-## 📦 File Structure
-
-* `app.py`: The entry point. A gorgeous, modern CustomTkinter calibration dashboard and real-time HUD feedback panel.
-* `gesture_engine.py`: The heart of AeroGlide. Coordinates hand landmark data, runs the proportional gesture state machine, and simulates kernel Win32 mouse/keyboard inputs.
-* `smooth.py`: Holds the mathematical **Adaptive Double Exponential Smoothing Filter** which removes high-frequency hand tremors.
-* `video_stream.py`: Multi-threaded capture wrapper that fetches webcam frames in a separate thread.
-
----
-
-## 📥 Installation & Setup
+## 📥 Getting Started
 
 ### Prerequisites
-Make sure you have **Python 3.12** installed on your Windows machine. (Python 3.12 is highly recommended as it contains fully stable and complete binary distributions of MediaPipe Solutions).
+* **Windows OS** (required for low-level win32 ctypes input calls).
+* **Python 3.12** (highly recommended for stable MediaPipe Solution pre-built binary distributions).
 
-### Step-by-Step Installation
+### Installation Instructions
 
-1. **Clone the Repository:**
+1. **Clone this repository:**
    ```bash
    git clone https://github.com/idusha-manaka/aero-glide.git
    cd aero-glide
    ```
 
-2. **Install Core Dependencies:**
+2. **Install core dependencies:**
    ```bash
    pip install mediapipe==0.10.14 pyautogui customtkinter opencv-python
    ```
 
-3. **Launch the Application:**
+3. **Run the Application:**
    ```bash
    python app.py
    ```
 
 ---
 
-## ⚙️ Calibration & Optimization Guide
+## ⚙️ Calibration & Customization
 
-AeroGlide comes with a real-time calibration control panel to fit all webcams and room lightings:
+AeroGlide features a real-time dark-theme GUI control panel to easily calibrate pointer response to fit your workspace:
 
-* **Cursor Speed / Sensitivity:** Expands or shrinks the Active Zone dynamically. Set to `0.7x` or `0.8x` for a highly relaxed, comfortable cursor experience that reduces hand strain.
-* **Fine Precision Smoothing:** Damps down micro-tremors when making slow, tiny movements. Set lower (towards `0.05`) for absolute pixel-perfect editing.
-* **Fast Motion Responsiveness:** Controls how quickly the cursor catches up to your hand when moving fast. Keep high (towards `0.85`) for ultra-low latency.
-* **Pinch Click Threshold:** Adjusts how tightly you need to pinch your fingers to trigger a click. Set to `0.032` for a perfect balance between comfort and click accuracy.
+<p align="center">
+  <img src="assets/banner.png" alt="AeroGlide HUD" width="80%" style="border-radius: 8px;">
+</p>
+
+<details>
+  <summary><b>🔍 View Advanced Calibration Details</b></summary>
+  
+  * **Cursor Speed / Sensitivity:** Resizes the Active Zone dynamically. Set between `0.7x` and `0.8x` for a highly comfortable, low-fatigue pointer movement.
+  * **Fine Precision Smoothing:** Removes micro-tremors when moving slowly. Reduce towards `0.05` for extreme precision when drawing or editing.
+  * **Fast Motion Responsiveness:** Dampens maximum flick responses. Set between `0.75` and `0.85` for absolute zero lag.
+  * **Pinch Click Threshold:** Controls how tightly you need to pinch to click. The default `0.032` requires a comfortable, intentional pinch.
+</details>
 
 ---
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributions
-Created with ❤️ by [Idusha Manaka](https://github.com/idusha-manaka). Feel free to open issues or submit pull requests to make AeroGlide the best gesture control engine in the world!
+## 🤝 Community & Support
+Developed with ❤️ by [Idusha Manaka](https://github.com/idusha-manaka). Feel free to raise issues, submit pull requests, or star the repository to show your support!
