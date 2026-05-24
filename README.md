@@ -1,6 +1,6 @@
 <!-- DYNAMIC GRADIENT ANIMATED WAVING HEADER -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=d946ef,00f0ff&height=250&section=header&text=AeroGlide&fontSize=56&fontColor=ffffff&desc=Next-Gen%20Virtual%20Gesture%20Touchpad%20for%20Windows&descColor=00f0ff&descSize=16&descAlignY=72&animation=fadeIn" width="100%" alt="AeroGlide Animated Waving Title">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0d0b18,FF007F,00F0FF&height=250&section=header&text=AeroGlide&fontSize=56&fontColor=ffffff&font=Orbitron&desc=Next-Gen%20Virtual%20Gesture%20Touchpad%20for%20Windows&descColor=00f0ff&descSize=16&descAlignY=72&animation=twinkle" width="100%" alt="AeroGlide Animated Waving Title">
 </p>
 
 <!-- DYNAMIC TYPING SVG HEADER -->
