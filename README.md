@@ -81,7 +81,7 @@ Traditional virtual touchpads suffer from severe cursor drift, click latency, an
 
 ---
 
-## 🔮 Interactive Feature Showcases
+## 🔮 Futuristic Features Dashboard
 
 <br>
 
@@ -89,10 +89,10 @@ Traditional virtual touchpads suffer from severe cursor drift, click latency, an
 <table width="100%" style="border-collapse: collapse; border: none; background: transparent; margin-bottom: 25px;">
   <tr style="border: none; background: transparent;">
     <td width="55%" style="padding: 20px 10px; border: none; vertical-align: middle;">
-      <span style="background: rgba(0, 255, 128, 0.1); color: #00FF80; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 255, 128, 0.3); font-family: 'Outfit';">OS HARDWARE ACCELERATION</span>
+      <span style="background: rgba(0, 255, 128, 0.1); color: #00FF80; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 255, 128, 0.3); font-family: 'Outfit';">OS LEVEL PERFORMANCE</span>
       <h2 style="margin-top: 10px; color: #ffffff; font-size: 26px; font-weight: 800; font-family: 'Outfit'; border-bottom: none;">⚡ win32 Kernel Acceleration & DPI Awareness</h2>
       <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 12px; font-family: 'Inter';">
-        AeroGlide completely bypasses standard high-level cursor automation libraries by calling the kernel-level Windows <b>User32 API</b> (<code>SetCursorPos</code> and <code>mouse_event</code>) directly via Python ctypes. By calling <code>SetProcessDPIAware()</code>, tracking matches 1:1 with physical screen pixels on Windows laptops, overcoming 125%/150% display scaling issues.
+        AeroGlide completely bypasses standard high-level cursor automation libraries by calling the kernel-level Windows <b>User32 API</b> (<code>SetCursorPos</code> and <code>mouse_event</code>) directly via Python ctypes. Clicks, drags, and scrolling are injected directly into the OS. By calling <code>SetProcessDPIAware()</code>, tracking matches 1:1 with physical screen pixels on Windows laptops, overcoming 125%/150% display scaling issues.
       </p>
     </td>
     <td width="45%" style="padding: 10px; border: none; text-align: right;">
@@ -110,7 +110,7 @@ Traditional virtual touchpads suffer from severe cursor drift, click latency, an
       <img src="assets/banner.png" alt="AeroGlide Scale Box" width="100%" style="border-radius: 16px; border: 2px solid #2c2c35; box-shadow: 0 15px 45px rgba(0,0,0,0.5);">
     </td>
     <td width="55%" style="padding: 20px 20px; border: none; vertical-align: middle;">
-      <span style="background: rgba(0, 223, 255, 0.1); color: #00DFFF; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 223, 255, 0.3); font-family: 'Outfit';">GEOMETRIC PROPORTIONS</span>
+      <span style="background: rgba(0, 223, 255, 0.1); color: #00DFFF; font-size: 11px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(0, 223, 255, 0.3); font-family: 'Outfit';">GEOMETRIC ALGORITHMS</span>
       <h2 style="margin-top: 10px; color: #ffffff; font-size: 26px; font-weight: 800; font-family: 'Outfit'; border-bottom: none;">📐 Proportional & Rotation Independent Tracking</h2>
       <p style="font-size: 14px; color: #b0b0b5; line-height: 1.6; margin-top: 12px; font-family: 'Inter';">
         Traditional gesture systems fail when the hand is tilted or when the back of the hand faces the camera. AeroGlide uses <b>Proportional Euclidean Distances to the Wrist</b> normalized by the dynamic palm size $H = \text{distance}(\text{Wrist}, \text{Middle MCP})$. This scale and rotation-independent algorithm guarantees flawless tracking regardless of whether your hand is kept straight, sideways, palm-facing, or back-facing!
@@ -234,6 +234,20 @@ To make this project feel extremely high-end, copy and run these commands from o
 
 ---
 
+## 📈 Stargazers Trends over Time
+
+Show your support for this futuristic gesture navigation touchpad! Star the repository to track our growing community graph below:
+
+<p align="center">
+  <a href="https://github.com/idusha-manaka/aero-glide">
+    <img src="https://starchart.cc/idusha-manaka/aero-glide.svg" alt="AeroGlide Stargazers Over Time Graph" width="100%" style="max-width: 680px; border-radius: 12px; border: 1px solid #2c2c35; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+  </a>
+</p>
+
+<br>
+
+---
+
 ## ⚙️ Calibration & Customization
 
 AeroGlide features a real-time dark-theme GUI control panel to easily calibrate pointer response to fit your workspace:
@@ -253,4 +267,10 @@ AeroGlide features a real-time dark-theme GUI control panel to easily calibrate 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Community & Support
+<p align="center">
+  <a href="https://github.com/idusha-manaka">
+    <img src="https://img.shields.io/badge/Developed%20By-Idusha%20Manaka-00FF80?style=for-the-badge&logo=github&logoColor=black" alt="Author Badge">
+  </a>
+</p>
+
 Developed with ❤️ by [Idusha Manaka](https://github.com/idusha-manaka). Feel free to raise issues, submit pull requests, or star the repository to show your support!
