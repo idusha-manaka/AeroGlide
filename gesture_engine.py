@@ -326,8 +326,9 @@ class GestureEngine:
                     self.prev_scroll_y = avg_y
                     self.prev_scroll_x = avg_x
 
-                # --- 3. SYSTEM VOLUME GESTURE (Thumb, Index, Middle open; Pinky folded) ---
-                elif self.enable_volume and index_open and middle_open and not pinky_open and self.get_distance(thumb_tip, landmarks[5]) > 0.08:
+                # --- 3. SYSTEM VOLUME GESTURE (Thumb, Index, Middle open; Ring, Pinky folded) ---
+                # Normalized thumb-to-index-base distance checks if thumb is open in a scale-independent way
+                elif self.enable_volume and index_open and middle_open and not ring_open and not pinky_open and (self.get_distance(thumb_tip, landmarks[5]) / hand_scale) > 0.85:
                     gesture_mode = "Volume Mode"
                     self.zoom_start_dist = None
                     self.prev_scroll_y = None
@@ -338,7 +339,9 @@ class GestureEngine:
                     
                     if self.prev_vol_y is not None:
                         dy = avg_y - self.prev_vol_y
-                        if abs(dy) > 0.015:
+                        # Normalize dy by hand_scale to make volume adjustment sensitivity completely scale-independent
+                        dy_norm = dy / hand_scale
+                        if abs(dy_norm) > 0.15:
                             if current_time - self.last_vol_time > self.vol_cooldown:
                                 if dy < 0:
                                     pyautogui.press('volumeup')
