@@ -224,29 +224,28 @@
 
   <!-- GESTURE 3 -->
   <div style="background: #0f111a; border-left: 3.5px solid #FF007F; border-radius: 0 10px 10px 0; padding: 15px; margin-bottom: 15px;">
-    <span style="font-weight: 800; color: #ffffff; font-size: 14.5px; font-family: 'Outfit';">3. ✌️ Right Click &amp; Page Scroll</span>
+    <span style="font-weight: 800; color: #ffffff; font-size: 14.5px; font-family: 'Outfit';">3. ✌️ Zoom In / Out &amp; Right Click</span>
     <ul style="margin: 8px 0 0 0; padding-left: 20px; font-size: 13px; color: #b4b4c6; line-height: 1.5;">
       <li><b>Right Click:</b> Pinch Middle finger and Thumb together while Index is kept open and Ring/Pinky are folded. (Antidote check stops accidental clicks by checking if middle finger is not curled inside the palm boundary).</li>
-      <li><b>Page Scroll:</b> Hold Index and Middle fingers open close together (distance between tips $< 0.06 \times H$) and slide your hand up/down/left/right. This scrolls pages vertically or horizontally in a highly fluid manner.</li>
+      <li><b>Zoom In / Out:</b> Activated when exactly <b>2 fingers are open (Index &amp; Middle open; Ring, Pinky folded)</b>. Spread Thumb and Index wide apart to <b>Zoom In</b> (Ctrl + Scroll Up). Pinch them close together to <b>Zoom Out</b> (Ctrl + Scroll Down).</li>
     </ul>
   </div>
 
   <!-- GESTURE 4 -->
   <div style="background: #0f111a; border-left: 3.5px solid #00F0FF; border-radius: 0 10px 10px 0; padding: 15px; margin-bottom: 15px;">
-    <span style="font-weight: 800; color: #ffffff; font-size: 14.5px; font-family: 'Outfit';">4. 🖐️ Zoom In / Out</span>
+    <span style="font-weight: 800; color: #ffffff; font-size: 14.5px; font-family: 'Outfit';">4. 🖐️ High-Precision Page Scroll</span>
     <ul style="margin: 8px 0 0 0; padding-left: 20px; font-size: 13px; color: #b4b4c6; line-height: 1.5;">
-      <li><b>Anatomical Configuration:</b> All 5 fingers open (open hand position).</li>
-      <li><b>Proportional Metric:</b> Measures the span between Thumb and Index tips.</li>
-      <li><b>Behavior:</b> Spread Thumb and Index wide apart to <b>Zoom In</b> (simulates Ctrl + Scroll Up). Pinch Thumb and Index close together to <b>Zoom Out</b> (simulates Ctrl + Scroll Down). Completely blocks accidental zoom clicks during standard mouse navigation!</li>
+      <li><b>Anatomical Configuration:</b> All 4 main fingers are open and straight (Flat Open Palm! Index, Middle, Ring, Pinky open).</li>
+      <li><b>Behavior:</b> Slide your open hand up/down to scroll vertically, and left/right to scroll horizontally. This provides highly reliable, intuitive page navigation (like pushing a sheet of paper!).</li>
     </ul>
   </div>
 
   <!-- GESTURE 5 -->
   <div style="background: #0f111a; border-left: 3.5px solid #FF007F; border-radius: 0 10px 10px 0; padding: 15px;">
-    <span style="font-weight: 800; color: #ffffff; font-size: 14.5px; font-family: 'Outfit';">5. 👌 System Volume Dial</span>
+    <span style="font-weight: 800; color: #ffffff; font-size: 14.5px; font-family: 'Outfit';">5. 🔊 System Volume Dial</span>
     <ul style="margin: 8px 0 0 0; padding-left: 20px; font-size: 13px; color: #b4b4c6; line-height: 1.5;">
-      <li><b>Anatomical Configuration:</b> Thumb, Index, and Middle fingers are open. Ring and Pinky are folded.</li>
-      <li><b>Behavior:</b> Raise your hand upward to <b>Volume UP</b>; lower your hand downward to <b>Volume DOWN</b>. Perfect for media players!</li>
+      <li><b>Anatomical Configuration:</b> Exactly 3 fingers are open (Index, Middle, and Ring open; Pinky folded).</li>
+      <li><b>Behavior:</b> Raise your hand upward to trigger <b>Volume UP</b>; lower your hand downward to trigger <b>Volume DOWN</b>. Zero conflicts with scrolling!</li>
     </ul>
   </div>
 </div>
