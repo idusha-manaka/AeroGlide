@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 260" width="100%">
+  <defs>
+    <style>
+      .bg-rect {
+        fill: #0b0f17;
+        stroke: #1e293b;
+        stroke-width: 1.5;
+        rx: 16px;
+      }
+      .card {
+        fill: #131b2e;
+        stroke: #1e293b;
+        stroke-width: 1.5;
+        rx: 12px;
+        transition: all 0.3s ease;
+      }
+      .icon-bg {
+        fill: #1e293b;
+        rx: 50%;
+      }
+      .accent-line {
+        stroke: #00FF80;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+      }
+      .icon-stroke {
+        stroke: #00FF80;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+      .text-title {
+        fill: #ffffff;
+        font-family: 'Outfit', 'Segoe UI', -apple-system, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      .text-bullet {
+        fill: #94a3b8;
+        font-family: 'Inter', 'Segoe UI', -apple-system, sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+      }
+      .text-tag {
+        fill: #00FF80;
+        font-family: 'Outfit', 'Segoe UI', -apple-system, sans-serif;
+        font-size: 9px;
+        font-weight: 800;
+      }
+      .tag-bg {
+        fill: rgba(0, 255, 128, 0.1);
+        stroke: rgba(0, 255, 128, 0.25);
+        stroke-width: 1;
+        rx: 4px;
+      }
+
+      /* Light Theme Responsive Styles */
+      @media (prefers-color-scheme: light) {
+        .bg-rect {
+          fill: #f8fafc;
+          stroke: #e2e8f0;
+        }
+        .card {
+          fill: #ffffff;
+          stroke: #cbd5e1;
+        }
+        .icon-bg {
+          fill: #f1f5f9;
+        }
+        .accent-line {
+          stroke: #059669;
+        }
+        .icon-stroke {
+          stroke: #059669;
+        }
+        .text-title {
+          fill: #0f172a;
+        }
+        .text-bullet {
+          fill: #475569;
+        }
+        .text-tag {
+          fill: #059669;
+        }
+        .tag-bg {
+          fill: rgba(5, 150, 105, 0.08);
+          stroke: rgba(5, 150, 105, 0.2);
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect class="bg-rect" width="1000" height="260" />
+
+  <!-- ================= CARD 1: CURSOR NAVIGATION ================= -->
+  <g transform="translate(20, 20)">
+    <rect class="card" width="176" height="220" />
+    <line class="accent-line" x1="16" y1="16" x2="45" y2="16" />
+    
+    <!-- Vector Stylized Hand: Index Open -->
+    <g transform="translate(68, 30)">
+      <circle class="icon-bg" cx="20" cy="20" r="22" />
+      <!-- Stylized hand gesture: index finger up, others folded -->
+      <path class="icon-stroke" d="M12,32 C12,32 12,24 12,22 C12,20 14,20 14,22 L14,32 M16,32 L16,10 C16,8 19,8 19,10 L19,32 M21,32 L21,22 C21,20 23,20 23,22 L23,32 M25,32 L25,24 C25,22 27,22 27,24 L27,32 M28,32 C28,32 30,30 28,26 C26,22 21,22 21,22" />
+      <path class="icon-stroke" d="M10,32 C10,32 8,32 8,36 C8,40 18,40 22,40 C26,40 30,34 30,32" />
+    </g>
+
+    <!-- Tag -->
+    <rect class="tag-bg" x="16" y="88" width="80" height="18" />
+    <text class="text-tag" x="23" y="100">NAVIGATION</text>
+
+    <!-- Content -->
+    <text class="text-title" x="16" y="128">1. Cursor Glide</text>
+    <text class="text-bullet" x="16" y="152">• Index finger fully open</text>
+    <text class="text-bullet" x="16" y="172">• Other fingers folded</text>
+    <text class="text-bullet" x="16" y="192">• Exponential smoothing</text>
+  </g>
+
+  <!-- ================= CARD 2: LEFT CLICK & DRAG ================= -->
+  <g transform="translate(212, 20)">
+    <rect class="card" width="176" height="220" />
+    <line class="accent-line" x1="16" y1="16" x2="45" y2="16" />
+
+    <!-- Vector Stylized Hand: Pinch -->
+    <g transform="translate(68, 30)">
+      <circle class="icon-bg" cx="20" cy="20" r="22" />
+      <!-- Stylized pinch: thumb and index touching -->
+      <path class="icon-stroke" d="M12,32 C12,32 10,24 14,20 C18,16 23,16 25,20 C27,24 23,26 21,24 M16,14 C18,12 21,12 23,15 M21,24 C21,24 24,23 26,25 C28,27 28,30 26,32 M25,28 C27,28 29,30 28,33" />
+      <!-- Pinch spark -->
+      <path class="icon-stroke" d="M18,17 L19,19" stroke-width="1.5"/>
+      <path class="icon-stroke" d="M22,17 L21,19" stroke-width="1.5"/>
+    </g>
+
+    <!-- Tag -->
+    <rect class="tag-bg" x="16" y="88" width="86" height="18" />
+    <text class="text-tag" x="23" y="100">LEFT CLICK / DRAG</text>
+
+    <!-- Content -->
+    <text class="text-title" x="16" y="128">2. Left Click Latch</text>
+    <text class="text-bullet" x="16" y="152">• Index + Thumb pinch</text>
+    <text class="text-bullet" x="16" y="172">• Schmitt Trigger threshold</text>
+    <text class="text-bullet" x="16" y="192">• Hold > 0.4s to Drag</text>
+  </g>
+
+  <!-- ================= CARD 3: SCROLL & RIGHT CLICK ================= -->
+  <g transform="translate(404, 20)">
+    <rect class="card" width="176" height="220" />
+    <line class="accent-line" x1="16" y1="16" x2="45" y2="16" />
+
+    <!-- Vector Stylized Hand: Two Fingers -->
+    <g transform="translate(68, 30)">
+      <circle class="icon-bg" cx="20" cy="20" r="22" />
+      <!-- Stylized scroll/2-fingers open -->
+      <path class="icon-stroke" d="M13,32 L13,10 C13,8 16,8 16,10 L16,32 M19,32 L19,10 C19,8 22,8 22,10 L22,32 M25,32 L25,24 C25,22 28,22 28,24 L28,32 M29,32 C29,32 31,30 29,26 M10,32 C10,32 8,34 8,37 C8,40 18,40 22,40 C26,40 30,34 30,32" />
+    </g>
+
+    <!-- Tag -->
+    <rect class="tag-bg" x="16" y="88" width="84" height="18" />
+    <text class="text-tag" x="23" y="100">SCROLL &amp; CLICK</text>
+
+    <!-- Content -->
+    <text class="text-title" x="16" y="128">3. Scroll &amp; Right</text>
+    <text class="text-bullet" x="16" y="152">• Index + Middle open (Scroll)</text>
+    <text class="text-bullet" x="16" y="172">• Middle + Thumb (Right Ck)</text>
+    <text class="text-bullet" x="16" y="192">• Smooth vertical scrolling</text>
+  </g>
+
+  <!-- ================= CARD 4: ZOOM IN / OUT ================= -->
+  <g transform="translate(596, 20)">
+    <rect class="card" width="176" height="220" />
+    <line class="accent-line" x1="16" y1="16" x2="45" y2="16" />
+
+    <!-- Vector Stylized Hand: 5 Fingers Open -->
+    <g transform="translate(68, 30)">
+      <circle class="icon-bg" cx="20" cy="20" r="22" />
+      <!-- Stylized 5 fingers open -->
+      <path class="icon-stroke" d="M10,24 C8,21 11,18 12,21 L14,29 M14,29 L14,8 C14,6 16,6 16,8 L16,28 M18,28 L18,5 C18,3 20,3 20,5 L20,28 M22,28 L22,7 C22,5 24,5 24,7 L24,28 M26,28 L26,11 C26,9 28,9 28,11 L28,28 M8,30 C8,30 11,35 18,37 C25,39 28,32 28,30" />
+    </g>
+
+    <!-- Tag -->
+    <rect class="tag-bg" x="16" y="88" width="70" height="18" />
+    <text class="text-tag" x="23" y="100">DESKTOP ZOOM</text>
+
+    <!-- Content -->
+    <text class="text-title" x="16" y="128">4. Zoom Control</text>
+    <text class="text-bullet" x="16" y="152">• Open 5 fingers wide</text>
+    <text class="text-bullet" x="16" y="172">• Spread wide = Zoom In</text>
+    <text class="text-bullet" x="16" y="192">• Pinch closer = Zoom Out</text>
+  </g>
+
+  <!-- ================= CARD 5: VOLUME DIAL ================= -->
+  <g transform="translate(788, 20)">
+    <rect class="card" width="176" height="220" />
+    <line class="accent-line" x1="16" y1="16" x2="45" y2="16" />
+
+    <!-- Vector Stylized Hand: Volume / Dial -->
+    <g transform="translate(68, 30)">
+      <circle class="icon-bg" cx="20" cy="20" r="22" />
+      <!-- Stylized 3 fingers open (thumb, index, middle) -->
+      <path class="icon-stroke" d="M10,23 C9,21 11,19 12,21 L14,30 M14,30 L14,7 C14,5 16,5 16,7 L16,30 M18,30 L18,5 C18,3 20,3 20,5 L20,30 M22,30 L22,23 C22,21 24,21 24,23 L24,30 M26,30 L26,24 C26,22 28,22 28,24 L28,30" />
+      <!-- Vol waves -->
+      <path class="icon-stroke" d="M26,10 C28,12 28,16 26,18" stroke-width="1.5"/>
+      <path class="icon-stroke" d="M29,7 C33,11 33,17 29,21" stroke-width="1.5"/>
+    </g>
+
+    <!-- Tag -->
+    <rect class="tag-bg" x="16" y="88" width="76" height="18" />
+    <text class="text-tag" x="23" y="100">SYSTEM VOLUME</text>
+
+    <!-- Content -->
+    <text class="text-title" x="16" y="128">5. Volume Dial</text>
+    <text class="text-bullet" x="16" y="152">• 3 fingers open (Ring folded)</text>
+    <text class="text-bullet" x="16" y="172">• Move hand up = Vol UP</text>
+    <text class="text-bullet" x="16" y="192">• Move hand down = Vol DN</text>
+  </g>
+</svg>
