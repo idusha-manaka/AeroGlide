@@ -264,10 +264,68 @@ class GestureEngine:
                 middle_thumb_dist = self.get_distance(middle_tip, thumb_tip)
                 index_middle_dist = self.get_distance(index_tip, middle_tip)
 
+                # Count active open fingers
+                open_fingers_count = sum([index_open, middle_open, ring_open, pinky_open])
+
                 # ================= GESTURE CLASSIFIER STATE MACHINE =================
 
-                # --- 1. ZOOM GESTURE (All fingers open, scale using Index and Thumb distance) ---
-                if self.enable_zoom and index_open and middle_open and ring_open and pinky_open:
+                # --- 1. SCROLL GESTURE (All 4 main fingers open - Flat Open Palm!) ---
+                if open_fingers_count == 4:
+                    gesture_mode = "Scroll Mode"
+                    self.zoom_start_dist = None
+                    self.prev_vol_y = None
+                    
+                    # Track using the index tip
+                    avg_x = index_tip.x
+                    avg_y = index_tip.y
+
+                    if self.prev_scroll_y is not None and self.prev_scroll_x is not None:
+                        dy = avg_y - self.prev_scroll_y
+                        dx = avg_x - self.prev_scroll_x
+                        
+                        # Apply deadzones to prevent accidental micro-scrolls
+                        if abs(dy) > 0.005:
+                            scroll_amount = int(dy * self.scroll_multiplier * 450)
+                            # Scroll vertically
+                            scroll_vertical(-scroll_amount)
+                        
+                        if abs(dx) > 0.005:
+                            scroll_amount = int(dx * self.scroll_multiplier * 450)
+                            # Scroll horizontally
+                            scroll_horizontal(scroll_amount)
+                            
+                    self.prev_scroll_y = avg_y
+                    self.prev_scroll_x = avg_x
+
+                # --- 2. SYSTEM VOLUME GESTURE (3 fingers open: Index, Middle, Ring; Pinky folded) ---
+                elif self.enable_volume and open_fingers_count == 3 and index_open and middle_open and ring_open and not pinky_open:
+                    gesture_mode = "Volume Mode"
+                    self.zoom_start_dist = None
+                    self.prev_scroll_y = None
+                    self.prev_scroll_x = None
+                    
+                    current_time = time.time()
+                    avg_y = index_tip.y
+                    
+                    if self.prev_vol_y is not None:
+                        dy = avg_y - self.prev_vol_y
+                        # Normalize dy by hand_scale to make volume adjustment sensitivity completely scale-independent
+                        dy_norm = dy / hand_scale
+                        if abs(dy_norm) > 0.15:
+                            if current_time - self.last_vol_time > self.vol_cooldown:
+                                if dy < 0:
+                                    pyautogui.press('volumeup')
+                                    gesture_mode = "Volume UP"
+                                else:
+                                    pyautogui.press('volumedown')
+                                    gesture_mode = "Volume DOWN"
+                                self.last_vol_time = current_time
+                                self.prev_vol_y = avg_y
+                    else:
+                        self.prev_vol_y = avg_y
+
+                # --- 3. ZOOM GESTURE (2 fingers open: Index & Middle; Ring, Pinky folded) ---
+                elif self.enable_zoom and open_fingers_count == 2 and index_open and middle_open and not ring_open and not pinky_open:
                     gesture_mode = "Zoom Mode"
                     current_time = time.time()
                     
@@ -298,64 +356,8 @@ class GestureEngine:
                     self.prev_scroll_x = None
                     self.prev_vol_y = None
 
-                # --- 2. SCROLL GESTURE (Index and Middle open, but kept close together) ---
-                elif index_open and middle_open and not pinky_open and index_middle_dist <= self.zoom_threshold:
-                    gesture_mode = "Scroll Mode"
-                    self.zoom_start_dist = None
-                    self.prev_vol_y = None
-                    
-                    # Calculate center point of scrolling fingers
-                    avg_x = (index_tip.x + middle_tip.x) / 2
-                    avg_y = (index_tip.y + middle_tip.y) / 2
-
-                    if self.prev_scroll_y is not None and self.prev_scroll_x is not None:
-                        dy = avg_y - self.prev_scroll_y
-                        dx = avg_x - self.prev_scroll_x
-                        
-                        # Apply deadzones to prevent accidental micro-scrolls
-                        if abs(dy) > 0.005:
-                            scroll_amount = int(dy * self.scroll_multiplier * 450)
-                            # Scroll vertically
-                            scroll_vertical(-scroll_amount)
-                        
-                        if abs(dx) > 0.005:
-                            scroll_amount = int(dx * self.scroll_multiplier * 450)
-                            # Scroll horizontally
-                            scroll_horizontal(scroll_amount)
-                            
-                    self.prev_scroll_y = avg_y
-                    self.prev_scroll_x = avg_x
-
-                # --- 3. SYSTEM VOLUME GESTURE (Thumb, Index, Middle open; Ring, Pinky folded) ---
-                # Normalized thumb-to-index-base distance checks if thumb is open in a scale-independent way
-                elif self.enable_volume and index_open and middle_open and not ring_open and not pinky_open and (self.get_distance(thumb_tip, landmarks[5]) / hand_scale) > 0.85:
-                    gesture_mode = "Volume Mode"
-                    self.zoom_start_dist = None
-                    self.prev_scroll_y = None
-                    self.prev_scroll_x = None
-                    
-                    current_time = time.time()
-                    avg_y = index_tip.y
-                    
-                    if self.prev_vol_y is not None:
-                        dy = avg_y - self.prev_vol_y
-                        # Normalize dy by hand_scale to make volume adjustment sensitivity completely scale-independent
-                        dy_norm = dy / hand_scale
-                        if abs(dy_norm) > 0.15:
-                            if current_time - self.last_vol_time > self.vol_cooldown:
-                                if dy < 0:
-                                    pyautogui.press('volumeup')
-                                    gesture_mode = "Volume UP"
-                                else:
-                                    pyautogui.press('volumedown')
-                                    gesture_mode = "Volume DOWN"
-                                self.last_vol_time = current_time
-                                self.prev_vol_y = avg_y
-                    else:
-                        self.prev_vol_y = avg_y
-
-                # --- 4. CURSOR NAVIGATION & CLICK / DRAG (Index Open, Middle folded) ---
-                elif index_open and not middle_open:
+                # --- 4. CURSOR NAVIGATION & CLICK / DRAG (1 finger open: Index Open; Middle, Ring, Pinky folded) ---
+                elif open_fingers_count == 1 and index_open:
                     self.zoom_start_dist = None
                     self.prev_scroll_y = None
                     self.prev_scroll_x = None
