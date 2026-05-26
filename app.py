@@ -350,10 +350,28 @@ class AeroGlideApp(ctk.CTk):
             self.led_canvas.itemconfig(self.led_circle, fill="#E6E6FA")
             self.mode_value.configure(text="INACTIVE", text_color="#FF8DA1")
 
+    def handle_camera_error(self):
+        """Main-thread safe callback to update UI upon camera capture failure."""
+        self.is_touchpad_running = False
+        self.start_btn.configure(
+            text="🌸 START AEROGLIDE 🌸", 
+            fg_color="#FF8DA1",
+            text_color="#FFFFFF",
+            hover_color="#FF6B8B"
+        )
+        self.status_lbl.configure(text="CAM LOCKED / NOT FOUND", text_color="#FF007F")
+        self.led_canvas.itemconfig(self.led_circle, fill="#E6E6FA")
+        self.mode_value.configure(text="CAMERA ERROR", text_color="#FF007F")
+        self.fps = 0
+
     def run_touchpad_loop(self):
         """Threaded main processing loop for tracking and frame grabbing."""
         try:
             self.stream = VideoStream(src=0).start()
+            if not self.stream.is_valid:
+                self.after(0, self.handle_camera_error)
+                return
+
             self.engine = GestureEngine()
             
             # Synchronize sliders immediately
