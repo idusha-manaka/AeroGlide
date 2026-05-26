@@ -3,6 +3,8 @@ import customtkinter as ctk
 import cv2
 import threading
 import time
+import sys
+import pyautogui
 from video_stream import VideoStream
 from gesture_engine import GestureEngine
 
@@ -305,6 +307,18 @@ class AeroGlideApp(ctk.CTk):
 
 
         # ================= BOTTOM PANEL: MAIN TRIGGER BUTTON =================
+        self.calib_btn = ctk.CTkButton(
+            self.left_panel, 
+            text="🌟 CALIBRATE HAND 🌟", 
+            font=ctk.CTkFont(family="Segoe UI", size=13, weight="bold"),
+            height=40,
+            command=self.trigger_calibration,
+            fg_color="#00DFFF",
+            text_color="#0D0B18",
+            hover_color="#00BFFF"
+        )
+        self.calib_btn.pack(side="bottom", fill="x", padx=25, pady=5)
+
         self.start_btn = ctk.CTkButton(
             self.left_panel, 
             text="🌸 START AEROGLIDE 🌸", 
@@ -349,6 +363,28 @@ class AeroGlideApp(ctk.CTk):
             self.status_lbl.configure(text="SYSTEM OFFLINE", text_color="#FF8DA1")
             self.led_canvas.itemconfig(self.led_circle, fill="#E6E6FA")
             self.mode_value.configure(text="INACTIVE", text_color="#FF8DA1")
+
+    def trigger_calibration(self):
+        """Triggers gesture engine hand auto-calibration routine."""
+        if self.is_touchpad_running and self.stream and self.engine:
+            self.engine.start_calibration()
+        else:
+            self.status_lbl.configure(text="START SYSTEM FIRST!", text_color="#FF007F")
+            self.after(2000, lambda: self.status_lbl.configure(text="SYSTEM OFFLINE", text_color="#FF8DA1") if not self.is_touchpad_running else None)
+
+    def handle_failsafe_trigger(self):
+        """Safety shutdown when user triggers emergency E-stop (Escape key or screen corner failsafe)."""
+        self.is_touchpad_running = False
+        self.start_btn.configure(
+            text="🌸 START AEROGLIDE 🌸", 
+            fg_color="#FF8DA1",
+            text_color="#FFFFFF",
+            hover_color="#FF6B8B"
+        )
+        self.status_lbl.configure(text="SAFETY ESTOP TRIGGERED", text_color="#FFD700")
+        self.led_canvas.itemconfig(self.led_circle, fill="#E6E6FA")
+        self.mode_value.configure(text="EMERGENCY STOP", text_color="#FFD700")
+        self.fps = 0
 
     def handle_camera_error(self):
         """Main-thread safe callback to update UI upon camera capture failure."""
@@ -396,6 +432,23 @@ class AeroGlideApp(ctk.CTk):
                 
                 # Calculate real-time FPS
                 frame_count += 1
+
+                # Failsafe checks: Throttled to once every 10 frames to eliminate OS-level CPU bottlenecks
+                if frame_count % 10 == 0:
+                    # 1. Corner E-stop (physical cursor forced to top-left)
+                    pos_x, pos_y = pyautogui.position()
+                    if pos_x == 0 and pos_y == 0:
+                        self.after(0, self.handle_failsafe_trigger)
+                        break
+
+                    # 2. Async keyboard key listener E-stop (Escape key pressed)
+                    if sys.platform == "win32":
+                        import ctypes
+                        # 0x1B is the Virtual Key Code for VK_ESCAPE
+                        if ctypes.windll.user32.GetAsyncKeyState(0x1B) & 0x8000:
+                            self.after(0, self.handle_failsafe_trigger)
+                            break
+
                 curr_time = time.time()
                 elapsed = curr_time - prev_time
                 if elapsed >= 1.0:

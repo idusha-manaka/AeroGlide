@@ -4,6 +4,7 @@ import pyautogui
 import math
 import time
 import sys
+import statistics
 from smooth import AdaptiveSmoother
 
 # Prevent pyautogui from adding artificial delays (used for fallback or shortcuts)
@@ -100,6 +101,20 @@ class GestureEngine:
         self.zoom_threshold = 0.60    # Normalized zoom threshold
         self.hysteresis = 0.15        # Normalized hysteresis latch margin
         
+        # Finger open thresholds (can be auto-calibrated!)
+        self.index_open_threshold = 1.30
+        self.middle_open_threshold = 1.30
+        self.ring_open_threshold = 1.30
+        self.pinky_open_threshold = 1.20
+
+        # Auto-Calibration state machine variables
+        self.is_calibrating = False
+        self.calibration_phase = 0    # 0: Idle, 1: Flat Hand Open, 2: Index-Thumb Pinch
+        self.calibration_start_time = 0
+        self.calib_open_distances = []
+        self.calib_pinch_distances = []
+        self.calibration_done_show_until = 0
+
         # Pointer speed/sensitivity
         self.pointer_sensitivity = 1.0
         
@@ -155,16 +170,25 @@ class GestureEngine:
         self.mp_draw = mp.solutions.drawing_utils
 
     def get_distance(self, p1, p2):
-        """Calculates 2D Euclidean distance between two landmark points."""
-        return math.hypot(p1.x - p2.x, p1.y - p2.y)
+        """Calculates 3D Euclidean distance between two landmark points (using x, y, and z coordinates)."""
+        return math.sqrt((p1.x - p2.x)**2 + (p1.y - p2.y)**2 + (p1.z - p2.z)**2)
 
     def is_finger_open(self, tip_id, wrist_id, hand_scale, landmarks, threshold=1.30):
-        """Orientation-independent finger state detector based on proportional distance to wrist."""
+        """Orientation-independent finger state detector based on proportional 3D distance to wrist."""
         tip = landmarks[tip_id]
         wrist = landmarks[wrist_id]
-        dist = math.hypot(tip.x - wrist.x, tip.y - wrist.y)
+        dist = math.sqrt((tip.x - wrist.x)**2 + (tip.y - wrist.y)**2 + (tip.z - wrist.z)**2)
         normalized_dist = dist / hand_scale
         return normalized_dist > threshold
+
+    def start_calibration(self):
+        """Triggers the 4-second two-phase hand auto-calibration routine."""
+        self.is_calibrating = True
+        self.calibration_phase = 1
+        self.calibration_start_time = time.time()
+        self.calib_open_distances = []
+        self.calib_pinch_distances = []
+        self.calibration_done_show_until = 0
 
     def update_settings(self, **kwargs):
         """Allows dynamically updating settings from the GUI."""
@@ -223,9 +247,10 @@ class GestureEngine:
             cv2.LINE_AA
         )
 
-        if result.multi_hand_landmarks:
-            for hand_landmarks in result.multi_hand_landmarks:
+        if result.multi_hand_landmarks and result.multi_hand_world_landmarks:
+            for hand_landmarks, hand_world_landmarks in zip(result.multi_hand_landmarks, result.multi_hand_world_landmarks):
                 landmarks = hand_landmarks.landmark
+                world_landmarks = hand_world_landmarks.landmark
                 
                 # 2. Draw styled glowing hand landmarks
                 self.mp_draw.draw_landmarks(
@@ -236,33 +261,101 @@ class GestureEngine:
                     self.mp_draw.DrawingSpec(color=(0, 128, 255), thickness=2)
                 )
 
-                # Fetch landmarks for key fingers
-                wrist = landmarks[0]
-                thumb_tip = landmarks[4]
+                # Fetch landmarks for key fingers in image space (for coordinate mapping & drawing)
                 index_tip = landmarks[8]
-                index_pip = landmarks[6]
-                middle_tip = landmarks[12]
-                middle_pip = landmarks[10]
-                ring_tip = landmarks[16]
-                ring_pip = landmarks[14]
-                pinky_tip = landmarks[20]
-                pinky_pip = landmarks[18]
 
-                # Calculate palm size to normalize finger lengths (making it scale & orientation independent)
-                hand_scale = self.get_distance(landmarks[0], landmarks[9]) # WRIST to MIDDLE_MCP
+                # Fetch world landmarks for key fingers in 3D metric space (for exact physical math)
+                w_wrist = world_landmarks[0]
+                w_thumb_tip = world_landmarks[4]
+                w_index_tip = world_landmarks[8]
+                w_middle_tip = world_landmarks[12]
+                w_ring_tip = world_landmarks[16]
+                w_pinky_tip = world_landmarks[20]
+
+                # Calculate palm size in 3D meters to normalize hand tracking
+                hand_scale = self.get_distance(world_landmarks[0], world_landmarks[9]) # WRIST to MIDDLE_MCP in 3D meters
                 if hand_scale == 0:
                     hand_scale = 0.1
                 
-                # Determine which fingers are open (Scale and Rotation Independent!)
-                index_open = self.is_finger_open(8, 0, hand_scale, landmarks, threshold=1.30)
-                middle_open = self.is_finger_open(12, 0, hand_scale, landmarks, threshold=1.30)
-                ring_open = self.is_finger_open(16, 0, hand_scale, landmarks, threshold=1.30)
-                pinky_open = self.is_finger_open(20, 0, hand_scale, landmarks, threshold=1.20)
+                # ================= DYNAMIC AUTO-CALIBRATION ROUTINE =================
+                if self.is_calibrating:
+                    elapsed = time.time() - self.calibration_start_time
+                    if elapsed < 2.0:
+                        self.calibration_phase = 1
+                        # Collect flat hand open ratios (in real-world 3D metric coordinates)
+                        for f_id in [8, 12, 16]:
+                            tip = world_landmarks[f_id]
+                            dist = self.get_distance(tip, w_wrist)
+                            self.calib_open_distances.append(dist / hand_scale)
+                        gesture_mode = "Calibrating: Flat Hand Open"
+                    elif elapsed < 4.0:
+                        self.calibration_phase = 2
+                        # Collect thumb-index pinch ratios
+                        dist = self.get_distance(w_index_tip, w_thumb_tip)
+                        self.calib_pinch_distances.append(dist / hand_scale)
+                        gesture_mode = "Calibrating: Pinch State"
+                    else:
+                        # Complete calibration
+                        self.is_calibrating = False
+                        self.calibration_phase = 0
+                        self.calibration_done_show_until = time.time() + 1.5 # Show success for 1.5s
+                        
+                        # Process open hand values using robust median filtering to eliminate tracking outliers
+                        if self.calib_open_distances:
+                            median_open = statistics.median(self.calib_open_distances)
+                            self.index_open_threshold = max(1.0, min(1.5, median_open * 0.85))
+                            self.middle_open_threshold = self.index_open_threshold
+                            self.ring_open_threshold = self.index_open_threshold
+                            self.pinky_open_threshold = self.index_open_threshold * 0.90
+                        
+                        # Process pinch values using robust median filtering
+                        if self.calib_pinch_distances:
+                            median_pinch = statistics.median(self.calib_pinch_distances)
+                            self.click_threshold = max(0.15, min(0.45, median_pinch * 1.30))
+                        
+                        gesture_mode = "Calibration Complete!"
+                    
+                    # During calibration, we draw visual notifications and skip cursor movements
+                    overlay = frame.copy()
+                    cv2.rectangle(overlay, (0, 0), (w, h), (0, 0, 0), -1)
+                    cv2.addWeighted(overlay, 0.40, frame, 0.60, 0, frame)
+                    
+                    calib_text = ""
+                    if self.calibration_phase == 1:
+                        calib_text = f"CALIBRATING: OPEN FLAT HAND ({2.0 - elapsed:.1f}s)"
+                        text_color = (0, 223, 255)
+                    elif self.calibration_phase == 2:
+                        calib_text = f"CALIBRATING: PINCH FINGERS ({4.0 - elapsed:.1f}s)"
+                        text_color = (255, 0, 127)
+                        
+                    cv2.putText(frame, calib_text, (20, h // 2), cv2.FONT_HERSHEY_SIMPLEX, 0.65, text_color, 2, cv2.LINE_AA)
+                    cv2.putText(frame, "KEEP HAND IN CAMERA FRAME", (20, h // 2 + 35), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (200, 200, 200), 1, cv2.LINE_AA)
+                    
+                    # Draw glowing lines on the hand
+                    self.mp_draw.draw_landmarks(
+                        frame, hand_landmarks, self.mp_hands.HAND_CONNECTIONS,
+                        self.mp_draw.DrawingSpec(color=text_color, thickness=3, circle_radius=4),
+                        self.mp_draw.DrawingSpec(color=(255, 255, 255), thickness=2)
+                    )
+                    
+                    # Visual glassmorphism overlay on HUD to display state
+                    overlay_top = frame.copy()
+                    cv2.rectangle(overlay_top, (0, 0), (w, 50), (25, 25, 35), -1)
+                    cv2.addWeighted(overlay_top, 0.45, frame, 0.55, 0, frame)
+                    cv2.putText(frame, f"CALIB PHASE {self.calibration_phase}", (20, 32), cv2.FONT_HERSHEY_SIMPLEX, 0.6, text_color, 2, cv2.LINE_AA)
+                    
+                    return frame, gesture_mode
 
-                # Calculate distances
-                index_thumb_dist = self.get_distance(index_tip, thumb_tip)
-                middle_thumb_dist = self.get_distance(middle_tip, thumb_tip)
-                index_middle_dist = self.get_distance(index_tip, middle_tip)
+                # Determine which fingers are open (Scale and Rotation Independent!)
+                index_open = self.is_finger_open(8, 0, hand_scale, world_landmarks, threshold=self.index_open_threshold)
+                middle_open = self.is_finger_open(12, 0, hand_scale, world_landmarks, threshold=self.middle_open_threshold)
+                ring_open = self.is_finger_open(16, 0, hand_scale, world_landmarks, threshold=self.ring_open_threshold)
+                pinky_open = self.is_finger_open(20, 0, hand_scale, world_landmarks, threshold=self.pinky_open_threshold)
+
+                # Calculate distances in 3D world space (meters)
+                index_thumb_dist = self.get_distance(w_index_tip, w_thumb_tip)
+                middle_thumb_dist = self.get_distance(w_middle_tip, w_thumb_tip)
+                index_middle_dist = self.get_distance(w_index_tip, w_middle_tip)
 
                 # Count active open fingers
                 open_fingers_count = sum([index_open, middle_open, ring_open, pinky_open])
@@ -507,6 +600,22 @@ class GestureEngine:
             2, 
             cv2.LINE_AA
         )
+
+        # Draw Calibration Complete success banner
+        if self.calibration_done_show_until > 0:
+            if time.time() < self.calibration_done_show_until:
+                cv2.putText(
+                    frame,
+                    "CALIBRATION COMPLETE!",
+                    (w - 280, 32),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.6,
+                    (0, 255, 128),
+                    2,
+                    cv2.LINE_AA
+                )
+            else:
+                self.calibration_done_show_until = 0
         
         return frame, gesture_mode
         

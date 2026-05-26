@@ -7,7 +7,8 @@ class VideoStream:
         self.stream = None
         self.grabbed = False
         self.frame = None
-        self.started = False
+        self.stopped_event = threading.Event()
+        self.stopped_event.set() # initially stopped
         self.read_lock = threading.Lock()
         self.is_valid = False
 
@@ -31,16 +32,16 @@ class VideoStream:
     def start(self):
         if not self.is_valid:
             return self
-        if self.started:
+        if not self.stopped_event.is_set():
             return self
-        self.started = True
+        self.stopped_event.clear()
         self.thread = threading.Thread(target=self.update, args=())
         self.thread.daemon = True
         self.thread.start()
         return self
 
     def update(self):
-        while self.started:
+        while not self.stopped_event.is_set():
             if self.stream is None or not self.stream.isOpened():
                 with self.read_lock:
                     self.grabbed = False
@@ -63,7 +64,7 @@ class VideoStream:
             return self.grabbed, None
 
     def stop(self):
-        self.started = False
+        self.stopped_event.set()
         if hasattr(self, 'thread'):
             self.thread.join(timeout=1.0)
         if self.stream and self.stream.isOpened():
